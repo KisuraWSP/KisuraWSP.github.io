@@ -2,13 +2,56 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-    		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 		<title>Home</title>
 		<link rel="stylesheet" href="src/styles/index.css">
+		<script>
+			const welcomeDiv = document.querySelector('.welcome');
+			const previousScrollY = window.scrollY; 
+
+			window.addEventListener('scroll', function() {
+			const currentScrollY = window.scrollY;
+			const isScrollingDown = currentScrollY > previousScrollY;
+			previousScrollY = currentScrollY; 
+
+			if (isScrollingDown) {
+				welcomeDiv.classList.add('hidden');
+			} else {
+				welcomeDiv.classList.remove('hidden');
+			}
+			});
+		</script>
 	<head>
 	<body>
-		<div class="link">
-			<a href="src/pages/intro.html">Hi There</a>
+		<div class="welcome">
+			<div class="welcome-msg">
+				<img src="src/images/welcome.png" alt="welcome image" width="400" height="200"/>
+				<h1>I'm Kisura W.S.P</h1>
+			</div>	
+		</div>
+
+		<div class="socials">
+			<a href="https://www.linkedin.com/in/kisurawsp/">
+				<img src="src/images/linkedin-logo.png" width="50" height="50"/>
+			</a>
+			<a href="https://redstonemc2003.itch.io/">
+				<img src="src/images/Itch.io-logo.jpg" width="50" height="50"/>
+			</a>	
+			<a href="https://github.com/KisuraWSP">
+				<img src="src/images/github-logo.png" width="50" height="50"/>
+			</a>
+		</div>
+		<br/>
+		<div class="center-content">
+			<div class="links">	
+				<div class="about-me">
+					<a href="src/pages/about-me.html" class="link1">About Me</a>
+				</div>
+				
+				<div class="projects">
+					<a href="src/pages/projects.html" class="link2">Projects</a>
+				</div>
+			</div>
 		</div>
 	<body>
 </html>
