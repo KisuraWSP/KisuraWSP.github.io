@@ -69,4 +69,23 @@ a{
 .projects {
 	padding-left: 30%;  
 }
+
+@media only screen and (max-width: 768px) {
+	.welcome-msg {
+	  padding: 20%;
+	}
+	.socials {
+	  padding-left: 10%;
+	}
+	.links {
+	  flex-direction: column; 
+	  margin: 0 auto; 
+	}
+	.about-me, .projects {
+	  margin-bottom: 10px; 
+	}
+	h1 {
+	  font-size: 2em; 
+	}
+}
   
