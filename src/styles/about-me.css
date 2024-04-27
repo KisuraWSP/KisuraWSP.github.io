@@ -73,3 +73,15 @@ a {
   font-size: 100px;
   color:#333;
 }
+
+@media only screen and (max-width: 768px) {
+  main {
+    width: 90%; 
+  }
+  h1, h2 {
+    font-size: 1.5em;
+  }
+  .contact-links {
+    text-align: center; 
+  }
+}
