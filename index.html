@@ -1,65 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<!-- SEO CODE BEGIN -->
+		<meta charset="UTF-8">
+		<meta name="description" content="Portfolio Site of Kisura W.S.P">
+		<meta name="keywords" content="Portfolio">
+		<meta name="author" content="Kisura W.S.P">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Kisura W.S.P | Portfolio</title>
+		<!-- SEO CODE END -->
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="description" content="Portfolio Site of Kisura W.S.P">
-	<meta name="keywords" content="Portfolio">
-	<meta name="author" content="Kisura W.S.P">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Kisura W.S.P | Portfolio</title>
-	<link rel="stylesheet" href="src/styles/index.css">
-	<link rel="icon" type="image/x-icon" href="src/images/favicon.png">
-	<script>
-		const welcomeDiv = document.querySelector('.welcome');
-		const previousScrollY = window.scrollY;
+		<!-- FAVICON -->
+		<link rel="icon" type="image/x-icon" href="src/images/favicon.png">
 
-		window.addEventListener('scroll', function () {
-			const currentScrollY = window.scrollY;
-			const isScrollingDown = currentScrollY > previousScrollY;
-			previousScrollY = currentScrollY;
+		<!-- CLASSIC CSS -->
+		<link rel="stylesheet" href="src/index.css"/>
 
-			if (isScrollingDown) {
-				welcomeDiv.classList.add('hidden');
-			} else {
-				welcomeDiv.classList.remove('hidden');
-			}
-		});
-	</script>
-</head>
-
-<body>
-	<div class="welcome">
-		<div class="welcome-msg">
-			<img src="src/images/welcome.webp" alt="welcome image" width="400" height="200">
-			<h1>I'm Kisura W.S.P</h1>
+		<!-- SCRIPTS -->
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script defer src="src/index.js"></script>
+	</head>
+	<body class="font-sans bg-gray-100 text-gray-800">
+		<!-- Navbar -->
+		<div class="container mx-auto p-6">
+			<ul class="flex justify-end space-x-4">
+				<li>
+					<button type="button" class="rounded-full bg-cyan-100 p-2 hover:bg-cyan-500 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300" onclick="about_me()">About Me</button>
+				</li>
+				<li>
+					<button type="button" class="rounded-full bg-cyan-100 p-2 hover:bg-cyan-500 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300" onclick="projects()">Projects</button>
+				</li>
+				<li>
+					<button type="button" class="rounded-full bg-cyan-100 p-2 hover:bg-cyan-500 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300" onclick="services()">Services</button>
+				</li>
+			</ul>
 		</div>
-	</div>
 
-	<div class="socials">
-		<a href="https://www.linkedin.com/in/kisurawsp/" alt="linkedin">
-			<img src="src/images/linkedin-logo.webp" width="50" height="50" alt="linkedin profile">
-		</a>
-		<a href="https://redstonemc2003.itch.io/" alt="itch.io">
-			<img src="src/images/Itch.io-logo.webp" width="50" height="50" alt="itch.io storefront">
-		</a>
-		<a href="https://github.com/KisuraWSP" alt="github">
-			<img src="src/images/github-logo.webp" width="50" height="50" alt="github profile">
-		</a>
-	</div>
-	<br>
-
-	<div class="center-content">
-		<div class="links">
-			<div class="about-me">
-				<a href="src/pages/about-me.html" class="link1" alt="about-me">About Me</a>
+		<!-- Socials Button -->
+		<div class="logo flex justify-center items-center h-screen">
+			<a href="javascript:void(0)" aria-label="socials" id="showElements">
+				<svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+							<stop offset="0%" style="stop-color:#8EE4FF;stop-opacity:1" />
+							<stop offset="100%" style="stop-color:#3A8FB7;stop-opacity:1" />
+						</linearGradient>
+					</defs>
+					<circle cx="100" cy="100" r="100" fill="url(#grad1)" />
+					<text x="50%" y="45%" text-anchor="middle" fill="white" font-size="24">KISURA</text>
+					<text x="50%" y="60%" text-anchor="middle" fill="white" font-size="24">W.S.P</text>
+				</svg>
+			</a>
+		</div>
+		<div id="hiddenElements" class="hidden flex justify-around mt-4">
+			<div class="element flex items-center justify-center w-24 h-24 bg-cyan-300 rounded-full transition-all duration-500 opacity-0 transform scale-0">
+				<a href="https://github.com/KisuraWSP">
+					<img src="src/images/github-logo.webp" alt="github"/>
+				</a>
 			</div>
-			<div class="projects">
-				<a href="src/pages/projects.html" class="link2" alt="projects">Projects</a>
+			<div class="element flex items-center justify-center w-24 h-24 bg-cyan-300 rounded-full transition-all duration-500 opacity-0 transform scale-0">
+				<a href="https://redstonemc2003.itch.io">
+					<img src="src/images/Itch.io-logo.webp" alt="itch.io"/>
+				</a>
+			</div>
+			<div class="element flex items-center justify-center w-24 h-24 bg-cyan-300 rounded-full transition-all duration-500 opacity-0 transform scale-0">
+				<a href="https://www.linkedin.com/in/kisurawsp">
+					<img src="src/images/linkedin-logo.webp" alt="linkedin"/>
+				</a>
 			</div>
 		</div>
-	</div>
 
-</body>
+		<!-- ABOUT ME -->
+		<div class="about_me bg-white p-8 m-4 rounded-lg shadow-lg max-w-4xl mx-auto" id="about_me">
+			<section class="about mb-8">
+				<h2 class="text-2xl font-bold mb-4">About Me</h2>
+				<p>Enthusiastic and capable individual with a passion for programming seeking opportunities to contribute and grow in a dynamic environment. <br />Possesses strong problem-solving skills, attention to detail, and a commitment to delivering high-quality solutions.</p>
+			</section>
 
+			<section class="skills">
+				<h2 class="text-2xl font-bold mb-4">Skills</h2>
+				<ul class="grid grid-cols-2 md:grid-cols-3 gap-2">
+					<li class="bg-gray-200 p-2 rounded text-center">Java</li>
+					<li class="bg-gray-200 p-2 rounded text-center">C#</li>
+					<li class="bg-gray-200 p-2 rounded text-center">C++</li>
+					<li class="bg-gray-200 p-2 rounded text-center">Kotlin</li>
+					<li class="bg-gray-200 p-2 rounded text-center">Golang</li>
+					<li class="bg-gray-200 p-2 rounded text-center">Rust</li>
+					<li class="bg-gray-200 p-2 rounded text-center">JavaScript</li>
+					<li class="bg-gray-200 p-2 rounded text-center">TypeScript</li>
+					<li class="bg-gray-200 p-2 rounded text-center">HTML</li>
+					<li class="bg-gray-200 p-2 rounded text-center">CSS</li>
+					<li class="bg-gray-200 p-2 rounded text-center">Odin</li>
+					<li class="bg-gray-200 p-2 rounded text-center">Python</li>
+					<li class="bg-gray-200 p-2 rounded text-center">C</li>
+				</ul>
+			</section>
+		</div>
+
+		<!-- SERVICES -->
+		<div class="services bg-white p-8 m-4 rounded-lg shadow-lg max-w-4xl mx-auto" id="services">
+			<h1 class="text-2xl font-bold mb-4">Services</h1>
+			<ul class="flex justify-around">
+				<li class="bg-gray-200 p-4 rounded text-center">Software Engineer</li>
+				<li class="bg-gray-200 p-4 rounded text-center">Front-end Developer</li>
+				<li class="bg-gray-200 p-4 rounded text-center">Fullstack Developer</li>
+			</ul>
+		</div>
+
+		<!-- PROJECTS -->
+		<div class="projects bg-white p-8 m-4 rounded-lg shadow-lg max-w-4xl mx-auto" id="projects">
+			<h1 class="text-2xl font-bold mb-4">Personal Projects</h1>
+			<ul>
+				<li class="mb-4">
+					<a href="https://github.com/KisuraWSP/KisuraWSP.github.io" class="text-blue-500 font-semibold">Portfolio</a>
+					<p class="description mt-2">This is my personal portfolio which I host using GitHub Pages</p>
+				</li>
+				<li class="mb-4">
+					<a href="https://github.com/KisuraWSP/webServe" class="text-blue-500 font-semibold">WebServe</a>
+					<p class="description mt-2">A CLI application that runs a localhost server that runs your static HTML page</p>
+				</li>
+				<li class="mb-4">
+					<a href="https://github.com/KisuraWSP/courseweb_student" class="text-blue-500 font-semibold">CourseWeb Student</a>
+					<p class="description mt-2">A Prototype mobile application for a student in a university</p>
+				</li>
+			</ul>
+
+			<h1 class="text-2xl font-bold mb-4 mt-8">Collaborated Projects</h1>
+			<ul>
+				<li class="mb-4">
+					<a href="https://github.com/devgithub-sl/cms" class="text-blue-500 font-semibold">Construction Management System</a>
+					<p class="description mt-2">This is a Construction Management System written in C++ to represent the OOP Concepts used</p>
+				</li>
+				<li class="mb-4">
+					<a href="https://github.com/KisuraWSP/medical-center-management-system" class="text-blue-500 font-semibold">Medical Center Management System</a>
+					<p class="description mt-2">This is a Medical Center Management Application that is written using the React framework and using Material UI as the UI elements</p>
+				</li>
+			</ul>
+
+			<h1 class="text-2xl font-bold mb-4 mt-8">Games</h1>
+			<ul>
+				<li class="mb-4">
+					<a href="https://redstonemc2003.itch.io/badgame0" class="text-blue-500 font-semibold">Bad Game 0</a>
+					<p class="description mt-2">This is a game that was made using RPG Maker XP. It is a simple game that is made to showcase the engine's power.</p>
+				</li>
+				<li class="mb-4">
+					<a href="https://redstonemc2003.itch.io/boringgame1" class="text-blue-500 font-semibold">Boring Game 1</a>
+					<p class="description mt-2">This is a game that was made using RPG Maker MV. This is the direct sequel to Bad Game 0 it is made a little harder than the original.</p>
+				</li>
+			</ul>
+		</div>
+	</body>
 </html>
