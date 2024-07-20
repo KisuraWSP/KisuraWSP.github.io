@@ -10,19 +10,42 @@
 		<title>Kisura W.S.P | Portfolio</title>
 		<!-- SEO CODE END -->
 
-		<!-- FAVICON -->
+		<!-- FAVICON BEGIN -->
 		<link rel="icon" type="image/x-icon" href="src/images/favicon.png">
+		<!-- FAVICON END -->
 
 		<!-- CLASSIC CSS -->
 		<link rel="stylesheet" href="src/index.css"/>
+		<style>
+			body {
+				font-family: 'Arial, sans-serif';
+				background-color: #f3f4f6;
+				color: #333;
+			}
 
-		<!-- SCRIPTS -->
-		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+			h1, h2 {
+				color: #1f2937; 
+			}
+
+			a {
+				color: #3b82f6;
+				text-decoration: none;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+		</style>
+		<!-- CLASSIC CSS END-->
+
+		<!-- SCRIPTS BEGIN -->
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script defer src="src/index.js"></script>
+		<!-- SCRIPTS END -->
 	</head>
 	<body class="font-sans bg-gray-100 text-gray-800">
-		<!-- Navbar -->
+		<!-- NAVBAR BEGIN -->
 		<div class="container mx-auto p-6">
 			<ul class="flex justify-end space-x-4">
 				<li>
@@ -36,8 +59,9 @@
 				</li>
 			</ul>
 		</div>
+		<!-- NAVBAR END -->
 
-		<!-- Socials Button -->
+		<!-- SOCIALS BEGIN -->
 		<div class="logo flex justify-center items-center h-screen">
 			<a href="javascript:void(0)" aria-label="socials" id="showElements">
 				<svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -56,22 +80,23 @@
 		<div id="hiddenElements" class="hidden flex justify-around mt-4">
 			<div class="element flex items-center justify-center w-24 h-24 bg-cyan-300 rounded-full transition-all duration-500 opacity-0 transform scale-0">
 				<a href="https://github.com/KisuraWSP">
-					<img src="src/images/github-logo.webp" alt="github"/>
+					<img src="src/images/github-logo.webp" alt="github" loading="lazy"/>
 				</a>
 			</div>
 			<div class="element flex items-center justify-center w-24 h-24 bg-cyan-300 rounded-full transition-all duration-500 opacity-0 transform scale-0">
 				<a href="https://redstonemc2003.itch.io">
-					<img src="src/images/Itch.io-logo.webp" alt="itch.io"/>
+					<img src="src/images/Itch.io-logo.webp" alt="itch.io" loading="lazy"/>
 				</a>
 			</div>
 			<div class="element flex items-center justify-center w-24 h-24 bg-cyan-300 rounded-full transition-all duration-500 opacity-0 transform scale-0">
 				<a href="https://www.linkedin.com/in/kisurawsp">
-					<img src="src/images/linkedin-logo.webp" alt="linkedin"/>
+					<img src="src/images/linkedin-logo.webp" alt="linkedin" loading="lazy"/>
 				</a>
 			</div>
 		</div>
+		<!-- SOCIALS END -->
 
-		<!-- ABOUT ME -->
+		<!-- ABOUT ME BEGIN -->
 		<div class="about_me bg-white p-8 m-4 rounded-lg shadow-lg max-w-4xl mx-auto" id="about_me">
 			<section class="about mb-8">
 				<h2 class="text-2xl font-bold mb-4">About Me</h2>
@@ -97,8 +122,9 @@
 				</ul>
 			</section>
 		</div>
+		<!-- ABOUT ME END -->
 
-		<!-- SERVICES -->
+		<!-- SERVICES BEGIN -->
 		<div class="services bg-white p-8 m-4 rounded-lg shadow-lg max-w-4xl mx-auto" id="services">
 			<h1 class="text-2xl font-bold mb-4">Services</h1>
 			<ul class="flex justify-around">
@@ -107,21 +133,22 @@
 				<li class="bg-gray-200 p-4 rounded text-center">Fullstack Developer</li>
 			</ul>
 		</div>
+		<!-- SERVICES END -->
 
-		<!-- PROJECTS -->
+		<!-- PROJECTS BEGIN -->
 		<div class="projects bg-white p-8 m-4 rounded-lg shadow-lg max-w-4xl mx-auto" id="projects">
 			<h1 class="text-2xl font-bold mb-4">Personal Projects</h1>
 			<ul>
 				<li class="mb-4">
-					<a href="https://github.com/KisuraWSP/KisuraWSP.github.io" class="text-blue-500 font-semibold">Portfolio</a>
+					<a href="https://github.com/KisuraWSP/KisuraWSP.github.io" class="text-blue-700 font-semibold">Portfolio</a>
 					<p class="description mt-2">This is my personal portfolio which I host using GitHub Pages</p>
 				</li>
 				<li class="mb-4">
-					<a href="https://github.com/KisuraWSP/webServe" class="text-blue-500 font-semibold">WebServe</a>
+					<a href="https://github.com/KisuraWSP/webServe" class="text-blue-700 font-semibold">WebServe</a>
 					<p class="description mt-2">A CLI application that runs a localhost server that runs your static HTML page</p>
 				</li>
 				<li class="mb-4">
-					<a href="https://github.com/KisuraWSP/courseweb_student" class="text-blue-500 font-semibold">CourseWeb Student</a>
+					<a href="https://github.com/KisuraWSP/courseweb_student" class="text-blue-700 font-semibold">CourseWeb Student</a>
 					<p class="description mt-2">A Prototype mobile application for a student in a university</p>
 				</li>
 			</ul>
@@ -129,11 +156,11 @@
 			<h1 class="text-2xl font-bold mb-4 mt-8">Collaborated Projects</h1>
 			<ul>
 				<li class="mb-4">
-					<a href="https://github.com/devgithub-sl/cms" class="text-blue-500 font-semibold">Construction Management System</a>
+					<a href="https://github.com/devgithub-sl/cms" class="text-blue-700 font-semibold">Construction Management System</a>
 					<p class="description mt-2">This is a Construction Management System written in C++ to represent the OOP Concepts used</p>
 				</li>
 				<li class="mb-4">
-					<a href="https://github.com/KisuraWSP/medical-center-management-system" class="text-blue-500 font-semibold">Medical Center Management System</a>
+					<a href="https://github.com/KisuraWSP/medical-center-management-system" class="text-blue-700 font-semibold">Medical Center Management System</a>
 					<p class="description mt-2">This is a Medical Center Management Application that is written using the React framework and using Material UI as the UI elements</p>
 				</li>
 			</ul>
@@ -141,14 +168,15 @@
 			<h1 class="text-2xl font-bold mb-4 mt-8">Games</h1>
 			<ul>
 				<li class="mb-4">
-					<a href="https://redstonemc2003.itch.io/badgame0" class="text-blue-500 font-semibold">Bad Game 0</a>
+					<a href="https://redstonemc2003.itch.io/badgame0" class="text-blue-700 font-semibold">Bad Game 0</a>
 					<p class="description mt-2">This is a game that was made using RPG Maker XP. It is a simple game that is made to showcase the engine's power.</p>
 				</li>
 				<li class="mb-4">
-					<a href="https://redstonemc2003.itch.io/boringgame1" class="text-blue-500 font-semibold">Boring Game 1</a>
+					<a href="https://redstonemc2003.itch.io/boringgame1" class="text-blue-700 font-semibold">Boring Game 1</a>
 					<p class="description mt-2">This is a game that was made using RPG Maker MV. This is the direct sequel to Bad Game 0 it is made a little harder than the original.</p>
 				</li>
 			</ul>
 		</div>
+		<!-- PROJECTS END -->
 	</body>
 </html>

@@ -1,22 +1,3 @@
-body {
-    font-family: 'Arial, sans-serif';
-    background-color: #f3f4f6;
-    color: #333;
-}
-
-h1, h2 {
-    color: #1f2937; 
-}
-
-a {
-    color: #3b82f6;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 /*  SOCIALS */
 .logo {
     display: flex;
