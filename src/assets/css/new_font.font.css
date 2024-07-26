@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Coffee';
+    src: url('../font/Lonely\ Coffee.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+     font-family: 'Coffee', sans-serif;
+}
