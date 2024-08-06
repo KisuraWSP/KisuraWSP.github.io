@@ -4,6 +4,15 @@ import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+// import cpp from "../assets/images/cpp_logo.jpg";
+// <Card.Img variant="top" src={cpp} />
+import { CSSProperties } from "react";
+
+const box : CSSProperties = { 
+    width: "20rem",
+    margin: "1rem" 
+};
+
 const Projects : React.FC = () => {
     return(
         <>
@@ -11,7 +20,7 @@ const Projects : React.FC = () => {
             <Container>
                 <Row>
                     <Col>
-                    <Card style={{ width: '18rem', margin: "1rem" }}>
+                    <Card style={box}>
                         <Card.Body>
                             <Card.Title><a href="https://github.com/KisuraWSP/KisuraWSP.github.io">Portfolio</a></Card.Title>
                             <Card.Text>
@@ -19,7 +28,7 @@ const Projects : React.FC = () => {
                             </Card.Text>
                         </Card.Body>
                         </Card>
-                        <Card style={{ width: '18rem', margin: "1rem" }}>
+                        <Card style={box}>
                             <Card.Body>
                                 <Card.Title><a href="https://github.com/KisuraWSP/webServe">WebServe</a></Card.Title>
                                 <Card.Text>
@@ -30,7 +39,7 @@ const Projects : React.FC = () => {
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card style={{ width: '18rem', margin: "1rem" }}>
+                        <Card style={box}>
                             <Card.Body>
                                 <Card.Title><a href="https://github.com/KisuraWSP/book-api">Book API</a></Card.Title>
                                 <Card.Text>
@@ -40,7 +49,7 @@ const Projects : React.FC = () => {
                         </Card>
                     </Col>
                     <Col>
-                        <Card style={{ width: '18rem', margin: "1rem" }}>
+                        <Card style={box}>
                             <Card.Body>
                                 <Card.Title><a href="https://github.com/devgithub-sl/book-list">Book List</a></Card.Title>
                                 <Card.Text>
@@ -49,7 +58,7 @@ const Projects : React.FC = () => {
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card style={{ width: '18rem', margin: "1rem" }}>
+                        <Card style={box}>
                             <Card.Body>
                                 <Card.Title><a href="https://github.com/devgithub-sl/blog">Blog</a></Card.Title>
                                 <Card.Text>

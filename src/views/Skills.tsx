@@ -18,6 +18,21 @@ import php from "../assets/images/php_logo.png";
 import rust from "../assets/images/rust_logo.jpg";
 import ts from "../assets/images/typescript_logo.png";
 
+import { CSSProperties } from "react";
+
+const img_style : CSSProperties = {
+    margin: "1rem", 
+   // border: "0.2rem solid black", 
+    padding: "1rem", 
+    //borderRadius: "1rem"
+};
+/* Need to implement lazy loading later
+for now this will do
+<Suspense 
+fallback={<div>Image Components are loading...</div>}>
+
+</Suspense>
+*/
 const Skills : React.FC = () => {
     return(
         <>
@@ -25,7 +40,7 @@ const Skills : React.FC = () => {
             <Container fluid>
                 <Row>
                     <Col>
-                        <Figure style={{margin: "1rem"}}>
+                        <Figure style={img_style}>
                             <Figure.Image
                                 width={120}
                                 height={120}
@@ -33,7 +48,7 @@ const Skills : React.FC = () => {
                                 src={c}
                             />        
                         </Figure>
-                        <Figure style={{margin: "1rem"}}>
+                        <Figure style={img_style}>
                             <Figure.Image
                                 width={120}
                                 height={120}
@@ -41,7 +56,7 @@ const Skills : React.FC = () => {
                                 src={cpp}
                             />        
                         </Figure>
-                        <Figure style={{margin: "1rem"}}>
+                        <Figure style={img_style}>
                             <Figure.Image
                                 width={200}
                                 height={200}
@@ -49,7 +64,7 @@ const Skills : React.FC = () => {
                                 src={cs}
                             />        
                         </Figure>
-                        <Figure style={{margin: "1rem"}}>
+                        <Figure style={img_style}>
                             <Figure.Image
                                 width={120}
                                 height={120}
@@ -57,7 +72,7 @@ const Skills : React.FC = () => {
                                 src={css}
                             />        
                         </Figure>
-                        <Figure style={{margin: "1rem"}}>
+                        <Figure style={img_style}>
                             <Figure.Image
                                 width={200}
                                 height={200}
@@ -65,7 +80,7 @@ const Skills : React.FC = () => {
                                 src={golang}
                             />        
                         </Figure>
-                        <Figure style={{margin: "1rem"}}>
+                        <Figure style={img_style}>
                             <Figure.Image
                                 width={120}
                                 height={120}
@@ -77,7 +92,7 @@ const Skills : React.FC = () => {
                 </Row>
                 <Row>
                     <Col>
-                        <Figure style={{margin: "1rem"}}>
+                        <Figure style={img_style}>
                             <Figure.Image
                                 width={120}
                                 height={120}
@@ -85,7 +100,7 @@ const Skills : React.FC = () => {
                                 src={html}
                             />        
                         </Figure>
-                        <Figure style={{margin: "1rem"}}>
+                        <Figure style={img_style}>
                             <Figure.Image
                                 width={200}
                                 height={200}
@@ -93,7 +108,7 @@ const Skills : React.FC = () => {
                                 src={java}
                             />        
                         </Figure>
-                        <Figure style={{margin: "1rem"}}>
+                        <Figure style={img_style}>
                             <Figure.Image
                                 width={120}
                                 height={120}
@@ -101,7 +116,7 @@ const Skills : React.FC = () => {
                                 src={js}
                             />        
                         </Figure>
-                        <Figure style={{margin: "1rem"}}>
+                        <Figure style={img_style}>
                             <Figure.Image
                                 width={120}
                                 height={120}
@@ -109,7 +124,7 @@ const Skills : React.FC = () => {
                                 src={kotlin}
                             />        
                         </Figure>
-                        <Figure style={{margin: "1rem"}}>
+                        <Figure style={img_style}>
                             <Figure.Image
                                 width={120}
                                 height={120}
@@ -117,7 +132,7 @@ const Skills : React.FC = () => {
                                 src={php}
                             />        
                         </Figure>
-                        <Figure style={{margin: "1rem"}}>
+                        <Figure style={img_style}>
                             <Figure.Image
                                 width={120}
                                 height={120}
