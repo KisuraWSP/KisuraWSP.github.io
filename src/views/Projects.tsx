@@ -12,6 +12,7 @@ import blog_intro from "../assets/images/blog_intro.png";
 // import cpp from "../assets/images/cpp_logo.jpg";
 // <Card.Img variant="top" src={cpp} />
 import { CSSProperties } from "react";
+import KFoot from "../components/Footer.component";
 
 const box : CSSProperties = { 
     width: "20rem",
@@ -80,6 +81,7 @@ const Projects : React.FC = () => {
                     </Col>
                 </Row>    
             </Container>
+            <KFoot/>
         </>
     );
 };

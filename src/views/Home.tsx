@@ -8,6 +8,7 @@ import styled from "styled-components";
 
 import profile from "../assets/images/profile.jpeg";
 import SocialMedia from "../components/SocialMedia.component";
+import KFoot from "../components/Footer.component";
 
 
 const DETAILS = styled.p`
@@ -63,6 +64,7 @@ const Home: React.FC = () => {
                     </TextCol>
                 </Row>
             </Container>
+            <KFoot/>
         </>
     );
 };
