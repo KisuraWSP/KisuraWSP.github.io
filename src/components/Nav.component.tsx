@@ -16,6 +16,7 @@ const KNavBar : React.FC = () => {
                     <Nav.Link as={NavLink} to="/projects">Projects</Nav.Link>
                 </Nav.Item>
             </Nav>
+            <hr/>
         </>
     );
 };

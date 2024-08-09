@@ -30,6 +30,7 @@ const TextCol = styled(Col)`
         font-size: 5rem;
     }
 `;
+// @fix: Page is stuttering when i hover over the social buttons
 
 const Home: React.FC = () => {
     return (
