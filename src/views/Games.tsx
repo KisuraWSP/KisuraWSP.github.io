@@ -3,8 +3,7 @@
 const Games : React.FC = () => {
     return(
         <>
-            <h1>
-                Hallo,
+            <h1 style={{textAlign: "center", paddingTop: "10rem"}}>
                 Page is to be Constructed
             </h1>
         </>

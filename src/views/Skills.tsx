@@ -5,16 +5,6 @@ import Container from "react-bootstrap/Container";
 import { CSSProperties } from "react";
 import KFoot from "../components/Footer.component";
 
-
-
-/* Need to implement lazy loading later
-for now this will do
-<Suspense 
-fallback={<div>Image Components are loading...</div>}>
-
-</Suspense>
-*/
-
 const scale_factor : CSSProperties = {
     width: 120,
     height: 120,
