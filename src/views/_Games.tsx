@@ -1,6 +1,7 @@
+import { CSSProperties, memo } from "react";
 
 // showcases the colection of games i made
-const Games : React.FC = () => {
+function _Games() {
     return(
         <>
             <h1 style={{textAlign: "center", paddingTop: "10rem"}}>
@@ -8,6 +9,6 @@ const Games : React.FC = () => {
             </h1>
         </>
     );
-};
+}
 
-export default Games;
+export default memo(_Games);

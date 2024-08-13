@@ -1,18 +1,18 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from './views/Home';
-import Projects from './views/Projects';
-import Skills from './views/Skills';
-import Games from './views/Games';
+import _Projects from './views/_Projects';
+import _Skills from './views/_Skills';
+import _Games from './views/_Games';
+import _Home from './views/_Home';
 
 
 function App() {
   return(
     <>
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/skills" element={<Skills/>}/>
-        <Route path="/projects" element={<Projects/>}/>
-        <Route path="/games" element={<Games/>}/>
+        <Route path="/" element={<_Home/>}/>
+        <Route path="/skills" element={<_Skills/>}/>
+        <Route path="/projects" element={<_Projects/>}/>
+        <Route path="/games" element={<_Games/>}/>
       </Routes>
     </>
   );
