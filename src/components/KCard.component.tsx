@@ -1,22 +1,13 @@
 import { motion, Variants } from "framer-motion";
 import Card from 'react-bootstrap/Card';
 import React from "react";
-import { useMediaQuery } from "react-responsive";
 
-interface LinkProps {
-    href: string;
-    children: React.ReactNode;
-}
-
-const MyLink: React.FC<LinkProps> = ({ href, children }) => {
-    return <a href={href}>{children}</a>;
-};
 
 interface KCardProps {
     image   ?: string;
-    title   ?: React.FC<LinkProps> | undefined;
+    title   ?: React.ReactNode; 
     content ?: string;
-    isMobile?: boolean; // New prop to detect mobile view
+    isMobile?: boolean; 
 }
 
 const cardVariants: Variants = {
@@ -52,7 +43,7 @@ function KCard({ image, title, content, isMobile }: KCardProps) {
                 {image && <Card.Img variant="top" src={image} />}
                 <Card.Body>
                     <Card.Title>
-                        {title}
+                        {title}  
                     </Card.Title>
                     <Card.Text>
                         {content}

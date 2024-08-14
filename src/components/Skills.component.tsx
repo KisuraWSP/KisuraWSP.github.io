@@ -1,11 +1,3 @@
-import { CSSProperties } from "react";
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from "react-bootstrap/Container";
-import { motion } from "framer-motion";
-
 const __c = (
     <Tooltip id="tooltip-1">C</Tooltip>
 );
@@ -54,26 +46,42 @@ const __rust = (
     <Tooltip id="tooltip-12">Rust</Tooltip>
 );
 
+
+import { CSSProperties } from "react";
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from "react-bootstrap/Container";
+import { motion } from "framer-motion";
+
 interface SkillsProps {
     isMobile?: boolean;
 }
 
 const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
     const image_size: CSSProperties = {
-        width: 100,
-        height: 100,
+        width: isMobile ? 80 : 100,
+        height: isMobile ? 80 : 100,
+        margin: isMobile ? '5px' : '10px',
     };
 
     const skillBoxVariants = {
-        hover: isMobile ? {} : { scale: 1.2 },
-        tap: isMobile ? {} : { scale: 0.9 },
+        hover: isMobile ? {} : { scale: 1.1 },
+        tap: isMobile ? {} : { scale: 0.95 },
+    };
+
+    const containerStyle: CSSProperties = {
+        maxWidth: '1200px',
+        margin: '0 auto',
+        padding: isMobile ? '0 10px' : '0 20px',
+        overflowX: 'hidden',
     };
 
     return (
-        <>
-            <Container className="d-flex flex-column align-items-center">
-                <Row className="mt-4 justify-content-center">
-                    <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
+        <Container style={containerStyle}>
+            <Row className="mt-4 justify-content-center">
+            <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
                         <OverlayTrigger placement="top" overlay={__c}>
                             <motion.div
                                 className="box"
@@ -260,8 +268,7 @@ const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
                         </OverlayTrigger>                
                     </Col>
                 </Row>
-            </Container>
-        </>
+        </Container>
     );
 };
 

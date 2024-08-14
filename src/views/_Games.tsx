@@ -1,4 +1,4 @@
-import { CSSProperties, memo } from "react";
+import {  memo } from "react";
 
 // showcases the colection of games i made
 function _Games() {
