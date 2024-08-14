@@ -2,7 +2,6 @@ import { motion, Variants } from "framer-motion";
 import Card from 'react-bootstrap/Card';
 import React from "react";
 
-
 interface KCardProps {
     image   ?: string;
     title   ?: React.ReactNode; 
@@ -10,34 +9,35 @@ interface KCardProps {
     isMobile?: boolean; 
 }
 
-const cardVariants: Variants = {
-    offscreen: {
-        y: 300,
-    },
-    onscreen: {
-        y: 50,
-        rotate: -10,
-        transition: {
-            type: "spring",
-            bounce: 0.4,
-            duration: 0.8,
-        },
-    },
-};
 
 function KCard({ image, title, content, isMobile }: KCardProps) {
     const box = {
-        maxWidth: '300px', 
+        maxWidth: isMobile ? '`60%' : '300px', 
         margin: '20px auto',
+    };
+
+    const cardVariants: Variants = {
+        offscreen: {
+            y: isMobile ? 0 : 100,
+        },
+        onscreen: {
+            y: isMobile ? 0 : 50,
+            rotate: isMobile ? 0 : -10,
+            transition: {
+                type: "spring",
+                bounce: 0.4,
+                duration: 0.8,
+            },
+        },
     };
 
     return (
         <motion.div
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ once: true, amount: 0.8 }}
+            viewport={{ once: true, amount: 0.5 }} 
             style={box}
-            variants={!isMobile ? cardVariants : undefined} 
+            variants={!isMobile ? cardVariants : undefined}
         >
             <Card>
                 {image && <Card.Img variant="top" src={image} />}
