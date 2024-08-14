@@ -12,8 +12,8 @@ interface KCardProps {
 
 function KCard({ image, title, content, isMobile }: KCardProps) {
     const box = {
-        maxWidth: isMobile ? '`60%' : '300px', 
-        margin: '20px auto',
+        maxWidth: isMobile ? '`60%' : '18.75rem', 
+        margin: '1.25rem auto',
     };
 
     const cardVariants: Variants = {

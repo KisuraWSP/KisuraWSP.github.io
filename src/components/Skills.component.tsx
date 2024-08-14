@@ -63,7 +63,7 @@ const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
     const image_size: CSSProperties = {
         width: isMobile ? 80 : 100,
         height: isMobile ? 80 : 100,
-        margin: isMobile ? '5px' : '10px',
+        margin: isMobile ? '0.313rem' : '0.625rem',
     };
 
     const skillBoxVariants = {
@@ -74,7 +74,7 @@ const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
     const containerStyle: CSSProperties = {
         maxWidth: '1200px',
         margin: '0 auto',
-        padding: isMobile ? '0 10px' : '0 20px',
+        padding: isMobile ? '0rem 0.625rem' : '0rem 1.25rem',
         overflowX: 'hidden',
     };
 
