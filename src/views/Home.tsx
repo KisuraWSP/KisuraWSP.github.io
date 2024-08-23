@@ -50,12 +50,20 @@ function Home() {
 
     const headerStyle: CSSProperties = {
         textAlign: isMobile ? "center" : "left",
+        fontWeight:"bold"
     };
 
     const textStyle: CSSProperties = {
         textAlign: isMobile ? "center" : "left",
         margin: isMobile ? "1 3rem" : "1rem",
     };
+    
+    const textStyle2: CSSProperties = {
+        textAlign: isMobile ? "center" : "left",
+        margin: isMobile ? "1 3rem" : "1rem",
+        fontWeight: "bold"
+    };
+    
 
     const cardStyle : CSSProperties = {
         width: "30rem", 
@@ -80,11 +88,13 @@ function Home() {
                     <Col xs={12} md={6} className="d-flex flex-column align-items-center">
                         <Image src={profile} thumbnail style={profile_logo} loading="lazy" />
                         <h1 style={headerStyle}>Hello</h1>
-                        <h2 style={{ color: "#8642F6", textAlign: isMobile ? "center" : "left" }}>I'm Kisura W.S.P</h2>
-                        <h6 style={textStyle}>Web Developer/ Game Designer/ Software Engineer&nbsp;</h6>
+                        <h2 style={{ color: "#8642F6", textAlign: isMobile ? "center" : "left", 
+                            fontWeight:"bold"
+                         }}>I'm Kisura W.S.P</h2>
+                        <h6 style={textStyle2}>Web Developer/ Game Designer/ Software Engineer&nbsp;</h6>
                     </Col>
                     <Col xs={12} md={6}>
-                        <h1>About Me</h1>
+                        <h1 style={{fontSize: "3rem", fontWeight:"bold"}}>About Me</h1>
                         <h4 style={textStyle}>
                             I am a passionate and adaptable Interactive Media student with strong programming skills.
                             I excel in dynamic environments, solve problems efficiently, and pay close attention to detail.
@@ -98,17 +108,19 @@ function Home() {
                 </Row>
             </Container>
             <Container style={containerStyle}>
-                <h1>Skills</h1>
+                <h1 style={{fontSize: "3rem", fontWeight:"bold"}}>Skills</h1>
+                {/* Note to Self in conditional rendering we using one parent component */}
                 {!isMobile && (
                     <motion.div 
                         className="progress-bar"
                         style={{ scaleX: scrollYProgress }}
                     />
-                )}
+                )
+                }
                 <Skills isMobile={isMobile} />
             </Container>
             <Container>
-                <h1>Projects</h1>
+                <h1 style={{fontSize: "3rem", fontWeight:"bold"}}>Projects</h1>
                 <Row style={cardMargin}>
                     <Col>
                         <Card style={cardStyle}>

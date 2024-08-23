@@ -6,7 +6,7 @@ import "../assets/css/Nav.component.css";
 const KNavBar: React.FC = memo(() => {
   return (
     <>
-      <Nav className="justify-content-start" activeKey="/home" style={{ paddingTop: "1rem", paddingLeft: "1rem" }}>
+      <Nav className="justify-content-center" activeKey="/home" style={{ paddingTop: "1rem", paddingLeft: "1rem", fontSize: "2.5rem" }}>
         <Nav.Item>
           <Nav.Link as={NavLink} to="/">Home</Nav.Link>
         </Nav.Item>
