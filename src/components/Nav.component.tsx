@@ -8,14 +8,13 @@ const KNavBar: React.FC = memo(() => {
     <>
       <Nav className="justify-content-start" activeKey="/home" style={{ paddingTop: "1rem", paddingLeft: "1rem" }}>
         <Nav.Item>
-          <Nav.Link as={NavLink} to="/">About Me</Nav.Link>
+          <Nav.Link as={NavLink} to="/">Home</Nav.Link>
         </Nav.Item>
+        {/*
         <Nav.Item>
-          <Nav.Link as={NavLink} to="/skills">Skills</Nav.Link>
+          <Nav.Link as={NavLink} to="/games">Games</Nav.Link>
         </Nav.Item>
-        <Nav.Item>
-          <Nav.Link as={NavLink} to="/projects">Projects</Nav.Link>
-        </Nav.Item>
+        */}
       </Nav>
       <hr />
     </>

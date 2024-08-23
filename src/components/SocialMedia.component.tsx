@@ -18,18 +18,6 @@ const img_size: CSSProperties = {
     margin: "0.5rem"
 };
 
-const linkedinTooltip = (
-    <Tooltip id="linkedin-tooltip">LinkedIn</Tooltip>
-);
-
-const githubTooltip = (
-    <Tooltip id="github-tooltip">GitHub</Tooltip>
-);
-
-const itchIoTooltip = (
-    <Tooltip id="itch-io-tooltip">Itch.io</Tooltip>
-);
-
 const SocialMedia: React.FC = () => {
     return (
         <Row style={{ padding: "1rem" }}>
@@ -37,7 +25,9 @@ const SocialMedia: React.FC = () => {
                 <h4>You can find me at</h4>
 
                 {/* LinkedIn Button */}
-                <OverlayTrigger placement="bottom" overlay={linkedinTooltip}>
+                <OverlayTrigger placement="bottom" overlay={
+                    <Tooltip id="linkedin-tooltip">LinkedIn</Tooltip>
+                }>
                     <Button variant="link" className="d-inline-flex align-items-center">
                         <Image
                             rounded
@@ -49,7 +39,9 @@ const SocialMedia: React.FC = () => {
                 </OverlayTrigger>
 
                 {/* GitHub Button */}
-                <OverlayTrigger placement="bottom" overlay={githubTooltip}>
+                <OverlayTrigger placement="bottom" overlay={
+                    <Tooltip id="github-tooltip">GitHub</Tooltip>
+                }>
                     <Button variant="link" className="d-inline-flex align-items-center">
                         <Image
                             src={github_img}
@@ -61,7 +53,9 @@ const SocialMedia: React.FC = () => {
                 </OverlayTrigger>
 
                 {/* Itch.io Button */}
-                <OverlayTrigger placement="bottom" overlay={itchIoTooltip}>
+                <OverlayTrigger placement="bottom" overlay={
+                    <Tooltip id="itch-io-tooltip">Itch.io</Tooltip>
+                }>
                     <Button variant="link" className="d-inline-flex align-items-center">
                         <Image
                             rounded

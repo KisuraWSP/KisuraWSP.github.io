@@ -1,55 +1,3 @@
-const __c = (
-    <Tooltip id="tooltip-1">C</Tooltip>
-);
-
-const __cpp = (
-    <Tooltip id="tooltip-2">C++</Tooltip>
-);
-
-const __csh = (
-    <Tooltip id="tooltip-3">CSharp</Tooltip>
-);
-
-const __css = (
-    <Tooltip id="tooltip-4">CSS3</Tooltip>
-);
-
-const __js = (
-    <Tooltip id="tooltip-5">JavaScript</Tooltip>
-);
-
-const __html = (
-    <Tooltip id="tooltip-6">HTML5</Tooltip>
-);
-
-const __java = (
-    <Tooltip id="tooltip-7">Java</Tooltip>
-);
-
-const __kt = (
-    <Tooltip id="tooltip-8">Kotlin</Tooltip>
-);
-
-const __golang = (
-    <Tooltip id="tooltip-9">Go (Programming Langauge)</Tooltip>
-);
-
-const __ts = (
-    <Tooltip id="tooltip-10">TypeScript</Tooltip>
-);
-
-const __php = (
-    <Tooltip id="tooltip-11">PHP</Tooltip>
-);
-
-const __rust = (
-    <Tooltip id="tooltip-12">Rust</Tooltip>
-);
-
-const __python = (
-    <Tooltip id="tooltip-13">Python</Tooltip>
-);
-
 import { CSSProperties } from "react";
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
@@ -78,14 +26,16 @@ const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
         maxWidth: '1200px',
         margin: '0 auto',
         padding: isMobile ? '0rem 0.625rem' : '0rem 1.25rem',
-        overflowX: 'hidden',
+        overflow: 'hidden',
     };
 
     return (
         <Container style={containerStyle}>
             <Row className="mt-4 justify-content-center">
             <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
-                        <OverlayTrigger placement="top" overlay={__c}>
+                        <OverlayTrigger placement="top" overlay={
+                            <Tooltip id="tooltip-1">C</Tooltip>
+                        }>
                             <motion.div
                                 className="box"
                                 whileHover={{ scale: 1.2 }}
@@ -100,7 +50,9 @@ const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
                         </OverlayTrigger>  
                     </Col>
                     <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
-                        <OverlayTrigger placement="top" overlay={__cpp}>
+                        <OverlayTrigger placement="top" overlay={
+                            <Tooltip id="tooltip-2">C++</Tooltip>
+                        }>
                             <motion.div
                                 className="box"
                                 whileHover={{ scale: 1.2 }}
@@ -115,7 +67,9 @@ const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
                         </OverlayTrigger>  
                     </Col>
                     <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
-                        <OverlayTrigger placement="top" overlay={__csh}>
+                        <OverlayTrigger placement="top" overlay={
+                            <Tooltip id="tooltip-3">CSharp</Tooltip>
+                        }>
                             <motion.div
                                 className="box"
                                 whileHover={{ scale: 1.2 }}
@@ -132,7 +86,9 @@ const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
                 </Row>
                 <Row className="mt-4 justify-content-center">
                     <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
-                    <OverlayTrigger placement="top" overlay={__css}>
+                    <OverlayTrigger placement="top" overlay={
+                        <Tooltip id="tooltip-4">CSS3</Tooltip>
+                    }>
                         <motion.div
                             className="box"
                             whileHover={{ scale: 1.2 }}
@@ -147,7 +103,9 @@ const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
                     </OverlayTrigger>
                     </Col>
                     <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
-                        <OverlayTrigger placement="top" overlay={__js}>
+                        <OverlayTrigger placement="top" overlay={
+                            <Tooltip id="tooltip-5">JavaScript</Tooltip>
+                        }>
                             <motion.div
                                 className="box"
                                 whileHover={{ scale: 1.2 }}
@@ -162,7 +120,9 @@ const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
                         </OverlayTrigger>
                     </Col>
                     <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
-                        <OverlayTrigger placement="top" overlay={__html}>
+                        <OverlayTrigger placement="top" overlay={
+                            <Tooltip id="tooltip-6">HTML5</Tooltip>
+                        }>
                             <motion.div
                                 className="box"
                                 whileHover={{ scale: 1.2 }}
@@ -179,7 +139,9 @@ const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
                 </Row>
                 <Row className="mt-4 justify-content-center">
                     <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
-                    <OverlayTrigger placement="top" overlay={__java}>
+                    <OverlayTrigger placement="top" overlay={
+                        <Tooltip id="tooltip-7">Java</Tooltip>
+                    }>
                         <motion.div
                             className="box"
                             whileHover={{ scale: 1.2 }}
@@ -194,7 +156,9 @@ const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
                     </OverlayTrigger>
                     </Col>
                     <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
-                        <OverlayTrigger placement="top" overlay={__kt}>
+                        <OverlayTrigger placement="top" overlay={
+                            <Tooltip id="tooltip-8">Kotlin</Tooltip>
+                        }>
                             <motion.div
                                 className="box"
                                 whileHover={{ scale: 1.2 }}
@@ -209,7 +173,9 @@ const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
                         </OverlayTrigger>                      
                     </Col>
                     <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
-                        <OverlayTrigger placement="top" overlay={__golang}>
+                        <OverlayTrigger placement="top" overlay={
+                            <Tooltip id="tooltip-9">Go (Programming Langauge)</Tooltip>
+                        }>
                             <motion.div
                                 className="box"
                                 whileHover={{ scale: 1.2 }}
@@ -226,7 +192,9 @@ const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
                 </Row>
                 <Row className="mt-4 justify-content-center">
                     <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
-                        <OverlayTrigger placement="top" overlay={__ts}>
+                        <OverlayTrigger placement="top" overlay={
+                            <Tooltip id="tooltip-10">TypeScript</Tooltip>
+                        }>
                             <motion.div
                                 className="box"
                                 whileHover={{ scale: 1.2 }}
@@ -241,7 +209,9 @@ const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
                         </OverlayTrigger>
                     </Col>
                     <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
-                        <OverlayTrigger placement="top" overlay={__php}>
+                        <OverlayTrigger placement="top" overlay={
+                            <Tooltip id="tooltip-11">PHP</Tooltip>
+                        }>
                             <motion.div
                                 className="box"
                                 whileHover={{ scale: 1.2 }}
@@ -256,14 +226,16 @@ const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
                         </OverlayTrigger>
                     </Col>
                     <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
-                        <OverlayTrigger placement="top" overlay={__rust}>
-                                <motion.div
-                                    className="box"
-                                    whileHover={{ scale: 1.2 }}
-                                    whileTap={{ scale: 0.9 }}
-                                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                                    variants={skillBoxVariants}
-                                >
+                        <OverlayTrigger placement="top" overlay={
+                            <Tooltip id="tooltip-12">Rust</Tooltip>
+                        }>
+                            <motion.div
+                                className="box"
+                                whileHover={{ scale: 1.2 }}
+                                whileTap={{ scale: 0.9 }}
+                                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                                variants={skillBoxVariants}
+                            >
                                 <svg viewBox="0 0 128 128" style={image_size}>
                                     <path d="M62.96.242c-.232.135-1.203 1.528-2.16 3.097-2.4 3.94-2.426 3.942-5.65.55-2.098-2.208-2.605-2.612-3.28-2.607-.44.002-.995.152-1.235.332-.24.18-.916 1.612-1.504 3.183-1.346 3.6-1.41 3.715-2.156 3.86-.46.086-1.343-.407-3.463-1.929-1.565-1.125-3.1-2.045-3.411-2.045-1.291 0-1.655.706-2.27 4.4-.78 4.697-.754 4.681-4.988 2.758-1.71-.776-3.33-1.41-3.603-1.41-.274 0-.792.293-1.15.652-.652.652-.653.655-.475 4.246l.178 3.595-.68.364c-.602.322-1.017.283-3.684-.348-3.48-.822-4.216-.8-4.92.15l-.516.693.692 2.964c.38 1.63.745 3.2.814 3.487.067.287-.05.746-.26 1.02-.348.448-.717.49-3.94.44-5.452-.086-5.761.382-3.51 5.3.718 1.56 1.305 2.98 1.305 3.15 0 .898-.717 1.224-3.794 1.727-1.722.28-3.218.51-3.326.51-.107 0-.43.235-.717.522-.937.936-.671 1.816 1.453 4.814 2.646 3.735 2.642 3.75-1.73 5.421-4.971 1.902-5.072 2.37-1.287 5.96 3.525 3.344 3.53 3.295-.461 5.804C.208 62.8.162 62.846.085 63.876c-.093 1.253-.071 1.275 3.538 3.48 3.57 2.18 3.57 2.246.067 5.56C-.078 76.48.038 77 5.013 78.877c4.347 1.64 4.353 1.66 1.702 5.394-1.502 2.117-1.981 3-1.981 3.653 0 1.223.637 1.535 4.44 2.174 3.206.54 3.92.857 3.92 1.741 0 .182-.588 1.612-1.307 3.177-2.236 4.87-1.981 5.275 3.31 5.275 4.93 0 4.799-.15 3.737 4.294-.8 3.35-.813 3.992-.088 4.715.554.556 1.6.494 4.87-.289 2.499-.596 2.937-.637 3.516-.328l.66.354-.177 3.594c-.178 3.593-.177 3.595.475 4.248.358.36.884.652 1.165.652.282 0 1.903-.63 3.604-1.404 4.22-1.916 4.194-1.932 4.973 2.75.617 3.711.977 4.4 2.294 4.4.327 0 1.83-.88 3.34-1.958 2.654-1.893 3.342-2.19 4.049-1.74.182.115.89 1.67 1.572 3.455 1.003 2.625 1.37 3.31 1.929 3.576 1.062.51 1.72.1 4.218-2.62 3.016-3.286 3.14-3.27 5.602.72 2.72 4.406 3.424 4.396 6.212-.089 2.402-3.864 2.374-3.862 5.621-.47 2.157 2.25 2.616 2.61 3.343 2.61.464 0 1.019-.175 1.23-.388.214-.213.92-1.786 1.568-3.496.649-1.71 1.321-3.2 1.495-3.31.687-.436 1.398-.13 4.048 1.752 1.56 1.108 3.028 1.96 3.377 1.96 1.296 0 1.764-.92 2.302-4.535.46-3.082.554-3.378 1.16-3.685.596-.302.954-.2 3.75 1.07 1.701.77 3.323 1.402 3.604 1.402.282 0 .816-.302 1.184-.672l.672-.67-.184-3.448c-.177-3.29-.16-3.468.364-3.943.54-.488.596-.486 3.615.204 3.656.835 4.338.857 5.025.17.671-.67.664-.818-.254-4.69-1.03-4.346-1.168-4.19 3.78-4.19 3.374 0 3.75-.049 4.18-.523.718-.793.547-1.702-.896-4.779-.729-1.55-1.32-2.96-1.315-3.135.024-.914.743-1.227 4.065-1.767 2.033-.329 3.553-.71 3.829-.96.923-.833.584-1.918-1.523-4.873-2.642-3.703-2.63-3.738 1.599-5.297 5.064-1.866 5.209-2.488 1.419-6.09-3.51-3.335-3.512-3.317.333-5.677 4.648-2.853 4.655-3.496.082-6.335-3.933-2.44-3.93-2.406-.405-5.753 3.78-3.593 3.678-4.063-1.295-5.965-4.388-1.679-4.402-1.72-1.735-5.38 1.588-2.18 1.982-2.903 1.982-3.65 0-1.306-.586-1.598-4.436-2.22-3.216-.52-3.924-.835-3.924-1.75 0-.174.588-1.574 1.307-3.113 1.406-3.013 1.604-4.22.808-4.94-.428-.387-1-.443-4.067-.392-3.208.054-3.618.008-4.063-.439-.486-.488-.48-.557.278-3.725.931-3.88.935-3.975.17-4.694-.777-.73-1.262-.718-4.826.121-2.597.612-3.027.653-3.617.337l-.67-.36.185-3.582.186-3.58-.67-.67c-.369-.37-.891-.67-1.163-.67-.27 0-1.884.64-3.583 1.421-2.838 1.306-3.143 1.393-3.757 1.072-.612-.32-.714-.637-1.237-3.829-.603-3.693-.977-4.412-2.288-4.412-.311 0-1.853.925-3.426 2.055-2.584 1.856-2.93 2.032-3.574 1.807-.533-.186-.843-.59-1.221-1.599-.28-.742-.817-2.172-1.194-3.177-.762-2.028-1.187-2.482-2.328-2.482-.637 0-1.213.458-3.28 2.604-3.25 3.375-3.261 3.374-5.65-.545C66.073 1.78 65.075.382 64.81.24c-.597-.32-1.3-.32-1.85.002m2.96 11.798c2.83 2.014 1.326 6.75-2.144 6.75-3.368 0-5.064-4.057-2.66-6.36 1.358-1.3 3.304-1.459 4.805-.39m-3.558 12.507c1.855.705 2.616.282 6.852-3.8l3.182-3.07 1.347.18c4.225.56 12.627 4.25 17.455 7.666 4.436 3.14 10.332 9.534 12.845 13.93l.537.942-2.38 5.364c-1.31 2.95-2.382 5.673-2.382 6.053 0 .878.576 2.267 1.13 2.726.234.195 2.457 1.265 4.939 2.378l4.51 2.025.178 1.148c.23 1.495.26 5.167.052 6.21l-.163.816h-2.575c-2.987 0-2.756-.267-2.918 3.396-.118 2.656-.76 4.124-2.22 5.075-2.377 1.551-6.304 1.27-7.97-.57-.255-.284-.752-1.705-1.105-3.16-1.03-4.254-2.413-6.64-5.193-8.965-.878-.733-1.595-1.418-1.595-1.522 0-.102.965-.915 2.145-1.803 4.298-3.24 6.77-7.012 7.04-10.747.519-7.126-5.158-13.767-13.602-15.92-2.002-.51-2.857-.526-27.624-.526-14.057 0-25.56-.092-25.56-.204 0-.263 3.125-3.295 4.965-4.816 5.054-4.178 11.618-7.465 18.417-9.22l2.35-.61 3.34 3.387c1.839 1.863 3.64 3.5 4.003 3.637M20.3 46.34c1.539 1.008 2.17 3.54 1.26 5.062-1.405 2.356-4.966 2.455-6.373.178-2.046-3.309 1.895-7.349 5.113-5.24m90.672.13c4.026 2.454.906 8.493-3.404 6.586-2.877-1.273-2.97-5.206-.155-6.64 1.174-.6 2.523-.579 3.56.053M32.163 61.5v15.02h-13.28l-.526-2.285c-1.036-4.5-1.472-9.156-1.211-12.969l.182-2.679 4.565-2.047c2.864-1.283 4.706-2.262 4.943-2.625 1.038-1.584.94-2.715-.518-5.933l-.68-1.502h6.523V61.5M70.39 47.132c2.843.74 4.345 2.245 4.349 4.355.002 1.55-.765 2.52-2.67 3.38-1.348.61-1.562.625-10.063.708l-8.686.084v-8.92h7.782c6.078 0 8.112.086 9.288.393m-2.934 21.554c1.41.392 3.076 1.616 3.93 2.888.898 1.337 1.423 3.076 2.667 8.836 1.05 4.87 1.727 6.46 3.62 8.532 2.345 2.566 1.8 2.466 13.514 2.466 5.61 0 10.198.09 10.198.2 0 .197-3.863 4.764-4.03 4.764-.048 0-2.066-.422-4.484-.939-6.829-1.458-7.075-1.287-8.642 6.032l-1.008 4.702-.91.448c-1.518.75-6.453 2.292-9.01 2.82-4.228.87-8.828 1.162-12.871.821-6.893-.585-16.02-3.259-16.377-4.8-.075-.327-.535-2.443-1.018-4.704-.485-2.26-1.074-4.404-1.31-4.764-1.13-1.724-2.318-1.83-7.547-.674-1.98.44-3.708.796-3.84.796-.248 0-3.923-4.249-3.923-4.535 0-.09 8.728-.194 19.396-.23l19.395-.066.07-6.89c.05-4.865-.018-6.997-.23-7.25-.234-.284-1.485-.358-6.011-.358H53.32v-8.36l6.597.001c3.626.002 7.02.12 7.539.264M37.57 100.02c3.084 1.88 1.605 6.804-2.043 6.8-3.74 0-5.127-4.88-1.94-6.826 1.055-.643 2.908-.63 3.983.026m56.48.206c1.512 1.108 2.015 3.413 1.079 4.95-2.46 4.034-8.612.827-6.557-3.419 1.01-2.085 3.695-2.837 5.478-1.53"></path>
                                 </svg>
@@ -273,16 +245,52 @@ const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
                 </Row>
                 <Row className="mt-4 justify-content-center">
                     <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
-                        <OverlayTrigger placement="top" overlay={__python}>
-                                <motion.div
-                                    className="box"
-                                    whileHover={{ scale: 1.2 }}
-                                    whileTap={{ scale: 0.9 }}
-                                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                                    variants={skillBoxVariants}
-                                >
+                        <OverlayTrigger placement="top" overlay={
+                            <Tooltip id="tooltip-13">Python</Tooltip>
+                        }>
+                            <motion.div
+                                className="box"
+                                whileHover={{ scale: 1.2 }}
+                                whileTap={{ scale: 0.9 }}
+                                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                                variants={skillBoxVariants}
+                            >
                                 <svg viewBox="0 0 128 128" style={image_size}>
                                     <linearGradient id="python-original-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4"></stop><stop offset="1" stop-color="#306998"></stop></linearGradient><linearGradient id="python-original-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B"></stop><stop offset="1" stop-color="#FFE873"></stop></linearGradient><path fill="url(#python-original-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" transform="translate(0 10.26)"></path><path fill="url(#python-original-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" transform="translate(0 10.26)"></path><radialGradient id="python-original-c" cx="1825.678" cy="444.45" r="26.743" gradientTransform="matrix(0 -.24 -1.055 0 532.979 557.576)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#B8B8B8" stop-opacity=".498"></stop><stop offset="1" stop-color="#7F7F7F" stop-opacity="0"></stop></radialGradient><path opacity=".444" fill="url(#python-original-c)" d="M97.309 119.597c0 3.543-14.816 6.416-33.091 6.416-18.276 0-33.092-2.873-33.092-6.416 0-3.544 14.815-6.417 33.092-6.417 18.275 0 33.091 2.872 33.091 6.417z"></path>
+                                </svg>
+                            </motion.div>
+                        </OverlayTrigger>
+                    </Col>
+                    <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
+                        <OverlayTrigger placement="top" overlay={
+                            <Tooltip id="tooltip-14">MySQL</Tooltip>
+                        }>
+                            <motion.div
+                                className="box"
+                                whileHover={{ scale: 1.2 }}
+                                whileTap={{ scale: 0.9 }}
+                                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                                variants={skillBoxVariants}
+                            >                    
+                                <svg viewBox="0 0 128 128" style={image_size}>
+                                    <path fill="#00618A" d="M117.688 98.242c-6.973-.191-12.297.461-16.852 2.379-1.293.547-3.355.559-3.566 2.18.711.746.82 1.859 1.387 2.777 1.086 1.754 2.922 4.113 4.559 5.352 1.789 1.348 3.633 2.793 5.551 3.961 3.414 2.082 7.223 3.27 10.504 5.352 1.938 1.23 3.859 2.777 5.75 4.164.934.684 1.563 1.75 2.773 2.18v-.195c-.637-.812-.801-1.93-1.387-2.777l-2.578-2.578c-2.52-3.344-5.719-6.281-9.117-8.719-2.711-1.949-8.781-4.578-9.91-7.73l-.199-.199c1.922-.219 4.172-.914 5.949-1.391 2.98-.797 5.645-.59 8.719-1.387l4.164-1.187v-.793c-1.555-1.594-2.664-3.707-4.359-5.152-4.441-3.781-9.285-7.555-14.273-10.703-2.766-1.746-6.184-2.883-9.117-4.363-.988-.496-2.719-.758-3.371-1.586-1.539-1.961-2.379-4.449-3.566-6.738-2.488-4.793-4.93-10.023-7.137-15.066-1.504-3.437-2.484-6.828-4.359-9.91-9-14.797-18.687-23.73-33.695-32.508-3.195-1.867-7.039-2.605-11.102-3.57l-6.543-.395c-1.332-.555-2.715-2.184-3.965-2.977C16.977 3.52 4.223-3.312.539 5.672-1.785 11.34 4.016 16.871 6.09 19.746c1.457 2.012 3.32 4.273 4.359 6.539.688 1.492.805 2.984 1.391 4.559 1.438 3.883 2.695 8.109 4.559 11.695.941 1.816 1.98 3.727 3.172 5.352.727.996 1.98 1.438 2.18 2.973-1.227 1.715-1.297 4.375-1.984 6.543-3.098 9.77-1.926 21.91 2.578 29.137 1.383 2.223 4.641 6.98 9.117 5.156 3.918-1.598 3.043-6.539 4.164-10.902.254-.988.098-1.715.594-2.379v.199l3.57 7.133c2.641 4.254 7.324 8.699 11.297 11.699 2.059 1.555 3.68 4.242 6.344 5.152v-.199h-.199c-.516-.805-1.324-1.137-1.98-1.781-1.551-1.523-3.277-3.414-4.559-5.156-3.613-4.902-6.805-10.27-9.711-15.855-1.391-2.668-2.598-5.609-3.77-8.324-.453-1.047-.445-2.633-1.387-3.172-1.281 1.988-3.172 3.598-4.164 5.945-1.582 3.754-1.789 8.336-2.375 13.082-.348.125-.195.039-.398.199-2.762-.668-3.73-3.508-4.758-5.949-2.594-6.164-3.078-16.09-.793-23.191.59-1.836 3.262-7.617 2.18-9.316-.516-1.691-2.219-2.672-3.172-3.965-1.18-1.598-2.355-3.703-3.172-5.551-2.125-4.805-3.113-10.203-5.352-15.062-1.07-2.324-2.875-4.676-4.359-6.738-1.645-2.289-3.484-3.977-4.758-6.742-.453-.984-1.066-2.559-.398-3.566.215-.684.516-.969 1.191-1.191 1.148-.887 4.352.297 5.547.793 3.18 1.32 5.832 2.578 8.527 4.363 1.289.855 2.598 2.512 4.16 2.973h1.785c2.789.641 5.914.195 8.523.988 4.609 1.402 8.738 3.582 12.488 5.949 11.422 7.215 20.766 17.48 27.156 29.734 1.027 1.973 1.473 3.852 2.379 5.945 1.824 4.219 4.125 8.559 5.941 12.688 1.816 4.113 3.582 8.27 6.148 11.695 1.348 1.801 6.551 2.766 8.918 3.766 1.66.699 4.379 1.43 5.949 2.379 3 1.809 5.906 3.965 8.723 5.945 1.402.992 5.73 3.168 5.945 4.957zm-88.605-75.52c-1.453-.027-2.48.156-3.566.395v.199h.195c.695 1.422 1.918 2.34 2.777 3.566l1.98 4.164.199-.195c1.227-.867 1.789-2.25 1.781-4.363-.492-.52-.562-1.164-.992-1.785-.562-.824-1.66-1.289-2.375-1.98zm0 0"></path>
+                                </svg>
+                            </motion.div>
+                        </OverlayTrigger>
+                    </Col>
+                    <Col xs={6} md={4} lg={2} className="d-flex justify-content-center mb-4">
+                        <OverlayTrigger placement="top" overlay={
+                            <Tooltip id="tooltip-15">Git</Tooltip>
+                        }>
+                            <motion.div
+                                className="box"
+                                whileHover={{ scale: 1.2 }}
+                                whileTap={{ scale: 0.9 }}
+                                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                                variants={skillBoxVariants}
+                            >
+                                <svg viewBox="0 0 128 128" style={image_size}>
+                                    <path fill="#F34F29" d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z"></path>
                                 </svg>
                             </motion.div>
                         </OverlayTrigger>                
