@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
-import profile from "../assets/images/profile.jpeg";
+import profile from "../assets/images/profile.jpg";
 import SocialMedia from "../components/SocialMedia.component";
 import Skills from "../components/Skills.component";
 import Card from "react-bootstrap/Card";
@@ -35,8 +35,8 @@ function Home() {
     const { scrollYProgress } = useScroll();
 
     const profile_logo: CSSProperties = {
-        width: isMobile ? "12rem" : "20rem",
-        height: isMobile ? "12rem" : "20rem",
+        width: isMobile ? "16rem" : "24rem",
+        height: isMobile ? "18rem" : "26rem",
         marginBottom: isMobile ? "1rem" : "0",
     };
 
