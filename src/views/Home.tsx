@@ -72,7 +72,7 @@ function Home() {
 
     const cardMargin : CSSProperties = {
         marginBottom: isMobile ? "2rem" : "5rem",
-        paddingLeft: isMobile ? "1rem" : "0rem"
+        paddingLeft: isMobile ? "0.35rem" : "0rem"
     };
 
     return (

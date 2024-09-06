@@ -12,8 +12,8 @@ interface SkillsProps {
 
 const Skills: React.FC<SkillsProps> = ({ isMobile }) => {
     const image_size: CSSProperties = {
-        width: isMobile ? 200 : 100,
-        height: isMobile ? 200 : 100,
+        width: isMobile ? 160 : 100,
+        height: isMobile ? 160 : 100,
         margin: isMobile ? '0.5rem' : '0.625rem',
     };
 
