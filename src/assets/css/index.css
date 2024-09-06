@@ -10,6 +10,7 @@ body {
     --purple: #9900ff;
     --pink: #ff0066;
     --red: #fe0222;
+    --purple: #8642F6;
     --orange: #fd7702;
     --yellow: #ffbb00;
 
@@ -37,7 +38,7 @@ body {
     left: 0;
     right: 0;
     height: 10px;
-    background: var(--red);
+    background: var(--purple);
     transform-origin: 0%;
 }
 

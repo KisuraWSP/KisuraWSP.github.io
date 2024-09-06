@@ -13,8 +13,8 @@ import Tooltip from 'react-bootstrap/Tooltip';
 import Button from "react-bootstrap/Button";
 
 const img_size: CSSProperties = {
-    width: "3rem", 
-    height: "3rem",
+    width: "3.5rem", 
+    height: "3.5rem",
     margin: "0.5rem"
 };
 

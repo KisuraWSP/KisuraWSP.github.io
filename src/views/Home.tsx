@@ -26,7 +26,7 @@ interface LinkProps {
 
 const Link : React.FC<LinkProps> = ({url}) => {
     return(
-        <Button variant="primary" href={url} >View Source Code</Button>
+        <Button style={{backgroundColor: "#8642F6", borderColor:"transparent"}}href={url} >View Source Code</Button>
     );
 };
 
@@ -66,12 +66,13 @@ function Home() {
     
 
     const cardStyle : CSSProperties = {
-        width: "30rem", 
-        height: "30rem"
+        width: isMobile ? "25rem" : "30rem", 
+        height: isMobile ? "25rem" : "30rem"
     };
 
     const cardMargin : CSSProperties = {
-        marginBottom: "5rem"
+        marginBottom: isMobile ? "2rem" : "5rem",
+        paddingLeft: isMobile ? "1rem" : "0rem"
     };
 
     return (
