@@ -17,14 +17,13 @@ import portfolio_intro from "../assets/images/portfolio_intro.png";
 import webserve_intro from "../assets/images/webserve_intro.png";
 import booklist_intro from "../assets/images/book_list_intro.png";
 import blog_intro from "../assets/images/blog_intro.png";
-import nest_intro from "../assets/images/nest-js.png";
 import courseweb_intro from "../assets/images/coursweb_student.png";
 
 interface LinkProps {
     url : string
 }
 
-const Link : React.FC<LinkProps> = ({url}) => {
+export const Link : React.FC<LinkProps> = ({url}) => {
     return(
         <Button style={{backgroundColor: "#8642F6", borderColor:"transparent"}}href={url} >View Source Code</Button>
     );
@@ -179,19 +178,6 @@ function Home() {
                     </Col>
                 </Row>
                 <Row style={cardMargin}>
-                    <Col>
-                        <Card style={cardStyle}>
-                            <Card.Img variant="top" src={nest_intro} />
-                            <Card.Body>
-                                <Card.Title>Book API</Card.Title>
-                                <Card.Text>
-                                    A Project to learn Nest.js<br/>
-                                    Technologies Used: Nest.js, TypeScript
-                                </Card.Text>
-                                <Link url="https://github.com/KisuraWSP/book-api"/>
-                            </Card.Body>
-                        </Card>
-                    </Col>
                     <Col>
                         <Card style={cardStyle}>
                             <Card.Img variant="top" src={courseweb_intro} />
