@@ -58,7 +58,7 @@ function Learn() {
             <h1 style={headerStyle}>Learning Projects</h1>
             <p style={textStyle}>
                 These projects that are showcased within this page are used to learn
-                and understand the technologies work.
+                and understand how the technologies work.
             </p>
             <Container style={containerStyle}>
                 <Row style={cardMargin}>
