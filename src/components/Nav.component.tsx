@@ -10,11 +10,9 @@ const KNavBar: React.FC = memo(() => {
         <Nav.Item>
           <Nav.Link as={NavLink} to="/">Home</Nav.Link>
         </Nav.Item>
-        {/*
-        <Nav.Item>
-          <Nav.Link as={NavLink} to="/games">Games</Nav.Link>
-        </Nav.Item>
-        */}
+          <Nav.Item>
+            <Nav.Link as={NavLink} to="/learn" className="nav-link">Explore</Nav.Link>
+          </Nav.Item>
       </Nav>
       <hr />
     </>

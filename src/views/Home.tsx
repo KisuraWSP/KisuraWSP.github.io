@@ -35,7 +35,7 @@ function Home() {
     const { scrollYProgress } = useScroll();
 
     const profile_logo: CSSProperties = {
-        width: isMobile ? "16rem" : "24rem",
+        width: isMobile ? "16rem" : "22rem",
         height: isMobile ? "18rem" : "26rem",
         marginBottom: isMobile ? "1rem" : "0",
     };

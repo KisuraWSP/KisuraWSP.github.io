@@ -2,3 +2,8 @@
     color: #8642F6; 
     font-weight: bold;
 }
+
+.nav-link.active:hover {
+    color: darkorchid; 
+    font-weight: bold;
+}
