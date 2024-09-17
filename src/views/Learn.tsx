@@ -4,6 +4,7 @@ import KFoot from "../components/Footer.component";
 import Card from "react-bootstrap/Card";
 import nest_intro from "../assets/images/nest-js.png";
 import pyvox from "../assets/images/pyvox.png";
+import sokoban_demo from "../assets/images/sokoban_demo.png";
 import { Link } from "./Home";
 import { useMediaQuery } from "react-responsive";
 import Row from "react-bootstrap/Row";
@@ -35,8 +36,8 @@ function Learn() {
     };
 
     const cardStyle : CSSProperties = {
-        width: isMobile ? "28rem" : "30rem", 
-        height: isMobile ? "28rem" : "30rem",
+        width: isMobile ? "27rem" : "30rem", 
+        height: isMobile ? "29rem" : "30rem",
         marginBottom: isMobile ? "5rem" : "0rem"
     };
 
@@ -85,6 +86,21 @@ function Learn() {
                                     Technologies Used: Python, OpenGl, numpy, Numba
                                 </Card.Text>
                                 <Link url="https://github.com/redstonemc2003/pyvox"/>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+                <Row style={cardMargin}>
+                    <Col>
+                        <Card style={cardStyle}>
+                            <Card.Img variant="top" src={sokoban_demo} style={{height: "15rem"}}/>
+                            <Card.Body>
+                                <Card.Title>Sokoban Demo</Card.Title>
+                                <Card.Text>
+                                    This Project is a simple game used to learn how<br/>
+                                    to implement sokoban Game Mechanics
+                                </Card.Text>
+                                <Link url="https://github.com/redstonemc2003/sokoban-demo"/>
                             </Card.Body>
                         </Card>
                     </Col>
