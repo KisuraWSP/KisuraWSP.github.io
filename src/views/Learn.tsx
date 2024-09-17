@@ -41,9 +41,19 @@ function Learn() {
         marginBottom: isMobile ? "5rem" : "0rem"
     };
 
+    const cardStyle2 : CSSProperties = {
+        width: isMobile ? "27rem" : "30rem", 
+        height: isMobile ? "39rem" : "40rem",
+        marginBottom: isMobile ? "5rem" : "0rem"
+    };
+
     const cardMargin : CSSProperties = {
         marginBottom: isMobile ? "2rem" : "5rem",
         paddingLeft: isMobile ? "0.35rem" : "0rem"
+    };
+
+    const link : CSSProperties = {
+        textDecoration: "none"
     };
     
     return(
@@ -98,7 +108,8 @@ function Learn() {
                                 <Card.Title>Sokoban Demo</Card.Title>
                                 <Card.Text>
                                     This Project is a simple game used to learn how<br/>
-                                    to implement sokoban Game Mechanics
+                                    to implement sokoban Game Mechanics.
+                                    Technologies Used: ODIN, Raylib
                                 </Card.Text>
                                 <Link url="https://github.com/redstonemc2003/sokoban-demo"/>
                             </Card.Body>
@@ -106,6 +117,36 @@ function Learn() {
                     </Col>
                 </Row>
             </Container>  
+            <h1 style={headerStyle}>Collaborated Projects</h1>
+            <p style={textStyle}>
+                These Projects that are showcased here are our related to our group tasks
+                for our modules within our university.
+            </p>
+            <Container style={containerStyle}>
+                <Row style={cardMargin}>
+                    <Col>
+                        <Card style={cardStyle2}>
+                            <Card.Body>
+                                <h1>Medical Center Management System</h1>
+                                <Card.Text>
+                                    This project was made for the Information Technology Project.
+                                    The Task was to make a system based on a certain topic.
+                                    Technologies Used: React, MongoDB, Express, Node.js, Material UI
+                                </Card.Text>
+                                <h1>Group Members</h1>
+                                <a href="https://www.linkedin.com/in/malshan-rathnayake/" style={link}>Malshan Rathnayake</a><br/>
+                                <a href="https://www.linkedin.com/in/ravindu-kavishka-bab850211/" style={link}>Ravindu Kavishka</a><br/>
+                                <a href="https://www.linkedin.com/in/kaveesha-karunarathna/" style={link}>Kaveesha Karunarathne</a><br/>
+                                <a href="https://www.linkedin.com/in/jehan-silva-aa9a141ba/" style={link}>Jehan Silva</a><br/>
+                                <a href="https://www.linkedin.com/in/hansanie-neththasinghe/" style={link}>Hansanie Nethasinghe</a><br/>
+                                <a href="https://www.linkedin.com/in/santhushie-nallaperuma/" style={link}>Santhushie Nalluperuma</a><br/>
+                                <a href="https://www.linkedin.com/in/himaya-uwangi-327537265/" style={link}>Himaya Uwangi</a><br/>
+                                <Link url="https://github.com/KisuraWSP/medical-center-management-system"/>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
             <KFoot/>
         </div>
         </>
