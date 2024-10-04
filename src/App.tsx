@@ -1,13 +1,13 @@
 import { Route, Routes } from 'react-router-dom';
-import Learn from './views/Learn';
-import Home from './views/Home';
+import Explore from './views/ExplorePage.tsx';
+import Home from './views/HomePage.tsx';
 
 function App() {
   return(
     <>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/learn" element={<Learn/>}/>
+        <Route path="/explore" element={<Explore/>}/>
       </Routes>
     </>
   );

@@ -1,18 +1,18 @@
 import {  CSSProperties, memo } from "react";
-import KNavBar from "../components/Nav.component";
-import KFoot from "../components/Footer.component";
+import KNavBar from "../components/Nav.component.tsx";
+import KFoot from "../components/Footer.component.tsx";
 import Card from "react-bootstrap/Card";
 import nest_intro from "../assets/images/nest-js.png";
 import pyvox from "../assets/images/pyvox.png";
 import sokoban_demo from "../assets/images/sokoban_demo.png";
-import { Link } from "./Home";
+import { Link } from "./HomePage.tsx";
 import { useMediaQuery } from "react-responsive";
 import Row from "react-bootstrap/Row";
 import { motion, useScroll } from "framer-motion";
 import { Container } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 
-function Learn() {
+function Explore() {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
     const { scrollYProgress } = useScroll();
 
@@ -153,4 +153,4 @@ function Learn() {
     );
 }
 
-export default memo(Learn);
+export default memo(Explore);
