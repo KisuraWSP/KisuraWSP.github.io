@@ -82,7 +82,7 @@ function Explore() {
                                     A Project used to learn Nest.js<br/>
                                     Technologies Used: Nest.js, TypeScript
                                 </Card.Text>
-                                <Link url="https://github.com/KisuraWSP/book-api"/>
+                                <Link url="https://github.com/devgithub-sl/book-api"/>
                             </Card.Body>
                         </Card>
                     </Col>
