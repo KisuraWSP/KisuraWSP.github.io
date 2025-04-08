@@ -25,7 +25,7 @@ interface LinkProps {
 
 export const Link : React.FC<LinkProps> = ({url}) => {
     return(
-        <Button style={{backgroundColor: "#8642F6", borderColor:"transparent"}}href={url} >View Source Code</Button>
+        <Button style={{backgroundColor: "#8642F6", borderColor:"transparent"}}href={url} >View</Button>
     );
 };
 
