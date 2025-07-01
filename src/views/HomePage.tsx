@@ -81,7 +81,7 @@ function Home() {
                     className="progress-bar"
                     style={{ scaleX: scrollYProgress }}
                 />
-            )}
+            )} 
             <KNavBar />
             <Container style={containerStyle}>
                 <Row className="align-items-center">
