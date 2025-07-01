@@ -34,7 +34,7 @@ function Home() {
     const { scrollYProgress } = useScroll();
 
     const profile_logo: CSSProperties = {
-        width: isMobile ? "16rem" : "22rem",
+        width: isMobile ? "18rem" : "26rem",
         height: isMobile ? "18rem" : "26rem",
         marginBottom: isMobile ? "1rem" : "0",
     };
@@ -86,7 +86,7 @@ function Home() {
             <Container style={containerStyle}>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} className="d-flex flex-column align-items-center">
-                        <Image src={profile} rounded style={profile_logo} loading="lazy" />
+                        <Image src={profile} roundedCircle style={profile_logo} loading="lazy" />
                         <h1 style={headerStyle}>Hello</h1>
                         <h2 style={{ color: "#8642F6", textAlign: isMobile ? "center" : "left", 
                             fontWeight:"bold"
