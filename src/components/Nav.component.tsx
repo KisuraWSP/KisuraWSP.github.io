@@ -6,15 +6,17 @@ import "../assets/css/Nav.component.css";
 const KNavBar: React.FC = memo(() => {
   return (
     <>
-      <Nav className="justify-content-center" activeKey="/home" style={{ paddingTop: "1rem", paddingLeft: "1rem", fontSize: "2.5rem" }}>
-        <Nav.Item>
-          <Nav.Link as={NavLink} to="/">Home</Nav.Link>
-        </Nav.Item>
+      <div className="k-nav glass glass--tight">
+        <Nav className="justify-content-center nav-underline" activeKey="/">
+          <Nav.Item>
+            <Nav.Link as={NavLink} to="/" end className="nav-link">Home</Nav.Link>
+          </Nav.Item>
           <Nav.Item>
             <Nav.Link as={NavLink} to="/explore" className="nav-link">Explore</Nav.Link>
           </Nav.Item>
-      </Nav>
-      <hr />
+        </Nav>
+      </div>
+      <hr className="k-divider" />
     </>
   );
 });

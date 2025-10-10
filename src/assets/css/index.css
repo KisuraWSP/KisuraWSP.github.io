@@ -1,88 +1,203 @@
+/* === Dark-first theme tokens ============================================ */
+:root {
+  /* Base */
+  --bg: #0b0c10;
+  --fg: #e9ecf1;
+  --muted: #b6bcc8;
+  --primary: #9d7cff;          /* accent */
+  --primary-600: #835cff;
+
+  /* Glass + surface */
+  --card: rgba(18, 20, 28, 0.55);
+  --stroke: rgba(255, 255, 255, 0.14);
+  --shadow: 0 12px 36px rgba(0,0,0,0.35), 0 10px 40px rgba(111,135,255,0.20);
+
+  /* Progress bar */
+  --progress: linear-gradient(90deg, #9d7cff, #61d3ff);
+}
+
+/* Respect users set to light; still keep a gentle glass look */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f8fb;
+    --fg: #101218;
+    --muted: #4b5160;
+    --card: rgba(255,255,255,0.55);
+    --stroke: rgba(16,18,24,0.08);
+    --shadow: 0 10px 30px rgba(0,0,0,0.12);
+  }
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+
 body {
-    --black: #000000;
-    --ash-black: #222;
-    --beige: #f5f5dc;
-    --white: #fafafa;
-    --sky: #00ccff;
-    --green: #22dddd;
-    --blue: #1300ff;
-    --dusk: #6600ff;
-    --purple: #9900ff;
-    --pink: #ff0066;
-    --red: #fe0222;
-    --purple: #8642F6;
-    --orange: #fd7702;
-    --yellow: #ffbb00;
-
-    --background: var(--white);
-    --accent: var(--black);
-
-    margin: 0;
-    padding: 0;
-    background-color: var(--background);
-    color: var(--accent);
-    padding-bottom: 100px;
+  margin: 0;
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-    font-family: 'Anonymous Pro', monospace;
-    font-weight: 400;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
+/* === Liquid Glass background (visible, still cheap) ===================== */
+.bg-liquid {
+  position: relative;
+  min-height: 100%;
+  background:
+    radial-gradient(1100px 800px at 110% -10%, rgba(157,124,255,0.18), transparent 60%),
+    radial-gradient(900px 650px at -10% 0%, rgba(97,211,255,0.15), transparent 60%),
+    radial-gradient(1000px 700px at 50% 120%, rgba(255,130,184,0.12), transparent 60%),
+    var(--bg);
+  overflow-x: hidden;
 }
 
+/* Optional very subtle noise to avoid banding (pure CSS) */
+.bg-liquid::after {
+  content: "";
+  position: fixed; inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.008) 2px, rgba(255,255,255,0.008) 3px);
+  mix-blend-mode: soft-light;
+}
 
+/* === Centered page shell ================================================= */
+.k-shell {
+  width: min(1100px, 94vw);
+  margin-inline: auto;          /* centers everything */
+  margin-block: 18px;           /* top/bottom space */
+}
+
+/* A simple 2-col hero grid that collapses on mobile */
+.center-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 992px) {
+  .center-grid { grid-template-columns: 1fr 1fr; align-items: center; }
+}
+
+/* === Glass primitives ==================================================== */
+.glass {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.07));
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.glass::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(120% 60% at -10% -20%, rgba(255,255,255,0.35), transparent 35%),
+    linear-gradient(0deg, rgba(255,255,255,0.06), rgba(255,255,255,0.0));
+  pointer-events: none;
+  opacity: .45;
+}
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .glass {
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    backdrop-filter: blur(18px) saturate(160%);
+  }
+}
+.glass--tight { border-radius: 14px; }
+
+.card.glass,
+.react-bootstrap .card.glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.07));
+  border: 1px solid var(--stroke);
+}
+
+/* Section spacing */
+.section {
+  padding: clamp(1.25rem, 1.5vw + 1rem, 2rem);
+  margin: clamp(1rem, 2vw, 1.75rem) 0;
+}
+
+/* Headings + text */
+h1, h2, h3 { color: var(--fg); font-weight: 800; }
+p, h4, h5, h6 { color: var(--muted); }
+
+/* Links + buttons */
+a, .btn-link { color: var(--primary); }
+a:hover, .btn-link:hover { color: var(--primary-600); }
+
+.btn-primary, .btn-primary:focus {
+  background: var(--primary);
+  border-color: transparent;
+}
+.btn-primary:hover {
+  background: var(--primary-600);
+  border-color: transparent;
+}
+
+/* Progress bar (framer-motion) */
 .progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 10px;
-    background: var(--purple);
-    transform-origin: 0%;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  transform-origin: 0%;
+  background: var(--progress);
+  z-index: 999;
+  border-radius: 0 3px 3px 0;
 }
 
-.box {
-    width: 11.25rem;
-    height: 6.25rem;
-    border-radius: 3.125rem;
-    background: transparent;
-    padding-left: 0.625rem;
-    cursor: pointer;
+/* Images */
+img { border-radius: 12px; }
+
+/* Footer line soft */
+hr { border-color: var(--stroke); }
+
+/* Nav underline for active */
+.nav-underline .nav-link.active {
+  color: var(--fg);
+  border-bottom: 2px solid var(--primary);
 }
 
-.card {
-    font-size: 1.25rem;
-    width: 25rem;
-    height: 34.375rem;
+/* === Force all major sections (.k-shell) to be truly centered on the page === */
+
+/* Center the entire section horizontally */
+.k-shell {
+  width: 100%;
+  max-width: min(1100px, 92vw);  /* keep readable line length */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block;
+  position: relative;
+}
+
+/* Make sure the glass panel itself stays visually centered even if it has flex/grid inside */
+.k-shell.glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+/* Optional: consistent vertical breathing space between sections */
+section.k-shell {
+  padding-block: clamp(2rem, 5vh, 3.5rem);
+}
+
+/* Prevent Bootstrap's container from stretching full-width inside our shells */
+.k-shell .container,
+.k-shell .container-fluid {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto !important;
+  padding-left: clamp(1rem, 2vw, 2rem);
+  padding-right: clamp(1rem, 2vw, 2rem);
+}
+
+/* keeps the whole composition centered vertically a bit better on large screens */
+@media (min-width: 1200px) {
+  body {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: white;
-    border-radius: 1.25rem;
-    box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 0 2px hsl(0deg 0% 0% / 0.075),
-        0 0 4px hsl(0deg 0% 0% / 0.075), 0 0 8px hsl(0deg 0% 0% / 0.075),
-        0 0 16px hsl(0deg 0% 0% / 0.075);
-    transform-origin: 10% 60%;
-}
-
-.card-container {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding-top: 1.25rem;
-    margin-bottom: -7.5rem;
-}
-
-.splash {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    clip-path: path(
-        "M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z"
-    );
+  }
+  #root {
+    width: 100%;
+  }
 }
