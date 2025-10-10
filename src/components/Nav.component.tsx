@@ -14,6 +14,9 @@ const KNavBar: React.FC = memo(() => {
           <Nav.Item>
             <Nav.Link as={NavLink} to="/explore" className="nav-link">Explore</Nav.Link>
           </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={NavLink} to="/experience" className="nav-link">Experience</Nav.Link>
+          </Nav.Item>
         </Nav>
       </div>
       <hr className="k-divider" />

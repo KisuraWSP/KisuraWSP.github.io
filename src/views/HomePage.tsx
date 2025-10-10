@@ -1,4 +1,4 @@
-import { CSSProperties, memo } from "react";
+import { memo } from "react";
 import { useScroll, motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import KNavBar from "../components/Nav.component";
@@ -28,23 +28,6 @@ function Home() {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const { scrollYProgress } = useScroll();
 
-  const profile_logo: CSSProperties = {
-    width: isMobile ? "18rem" : "26rem",
-    height: isMobile ? "18rem" : "26rem",
-    marginBottom: isMobile ? "1rem" : "0",
-    objectFit: "cover"
-  };
-
-  const cardStyle: CSSProperties = {
-    width: isMobile ? "25rem" : "30rem",
-    height: isMobile ? "25rem" : "30rem"
-  };
-
-  const cardMargin: CSSProperties = {
-    marginBottom: isMobile ? "2rem" : "3rem",
-    paddingLeft: isMobile ? "0.35rem" : "0rem"
-  };
-
   return (
     <div className="bg-liquid">
       {!isMobile && <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />}
@@ -56,8 +39,8 @@ function Home() {
           <div className="d-flex flex-column align-items-center">
             <Image
               src={profile}
+              className="profile-img"
               roundedCircle
-              style={profile_logo}
               loading="lazy"
               decoding="async"
               alt="Profile"
@@ -72,7 +55,7 @@ function Home() {
           </div>
 
           <div>
-            <h1 style={{ fontSize: "2.4rem", fontWeight: "bold" }}>About Me</h1>
+            <h1 style={{ fontWeight: "bold" }}>About Me</h1>
             <p style={{ color: "var(--muted)" }}>
               I am a passionate and adaptable Interactive Media student with strong programming skills.
               I excel in dynamic environments, solve problems efficiently, and pay close attention to detail.
@@ -86,27 +69,20 @@ function Home() {
         </div>
       </section>
 
-      {/* Skills */}
-      <section className="k-shell glass section">
-        <h1 style={{ fontSize: "2.4rem", fontWeight: "bold" }}>Skills</h1>
-        {!isMobile && <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />}
-        <Skills isMobile={isMobile} />
-      </section>
-
       {/* Projects */}
-      <section className="k-shell glass section" style={{ marginBottom: "4rem" }}>
-        <h1 style={{ fontSize: "2.4rem", fontWeight: "bold" }}>Projects</h1>
+      <section className="k-shell glass section">
+        <h1 style={{ fontWeight: "bold" }}>Projects</h1>
 
-        <Container fluid="md" className="px-3">
-          <Row style={cardMargin}>
+        <Container className="px-0">
+          <Row>
             <Col>
-              <Card style={cardStyle} className="glass">
+              <Card className="glass card-resp">
                 <Card.Img
                   variant="top"
                   src={portfolio_intro}
                   loading="lazy"
                   decoding="async"
-                  sizes="(max-width:768px) 400px, 600px"
+                  sizes="(max-width:768px) 92vw, 560px"
                   alt="Portfolio project preview"
                 />
                 <Card.Body>
@@ -121,13 +97,13 @@ function Home() {
             </Col>
 
             <Col>
-              <Card style={cardStyle} className="glass">
+              <Card className="glass card-resp">
                 <Card.Img
                   variant="top"
                   src={webserve_intro}
                   loading="lazy"
                   decoding="async"
-                  sizes="(max-width:768px) 400px, 600px"
+                  sizes="(max-width:768px) 92vw, 560px"
                   alt="Web Serve CLI preview"
                 />
                 <Card.Body>
@@ -142,15 +118,15 @@ function Home() {
             </Col>
           </Row>
 
-          <Row style={cardMargin}>
+          <Row>
             <Col>
-              <Card style={cardStyle} className="glass">
+              <Card className="glass card-resp">
                 <Card.Img
                   variant="top"
                   src={booklist_intro}
                   loading="lazy"
                   decoding="async"
-                  sizes="(max-width:768px) 400px, 600px"
+                  sizes="(max-width:768px) 92vw, 560px"
                   alt="Book List preview"
                 />
                 <Card.Body>
@@ -165,13 +141,13 @@ function Home() {
             </Col>
 
             <Col>
-              <Card style={cardStyle} className="glass">
+              <Card className="glass card-resp">
                 <Card.Img
                   variant="top"
                   src={blog_intro}
                   loading="lazy"
                   decoding="async"
-                  sizes="(max-width:768px) 400px, 600px"
+                  sizes="(max-width:768px) 92vw, 560px"
                   alt="Blog CRUD preview"
                 />
                 <Card.Body>
@@ -186,15 +162,15 @@ function Home() {
             </Col>
           </Row>
 
-          <Row style={cardMargin}>
+          <Row>
             <Col>
-              <Card style={cardStyle} className="glass">
+              <Card className="glass card-resp">
                 <Card.Img
                   variant="top"
                   src={courseweb_intro}
                   loading="lazy"
                   decoding="async"
-                  sizes="(max-width:768px) 400px, 600px"
+                  sizes="(max-width:768px) 92vw, 560px"
                   alt="CourseWeb Student preview"
                 />
                 <Card.Body>
@@ -209,6 +185,13 @@ function Home() {
             </Col>
           </Row>
         </Container>
+      </section>
+
+      {/* Skills */}
+      <section className="k-shell glass section">
+        <h1 style={{ fontWeight: "bold" }}>Skills</h1>
+        {!isMobile && <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />}
+        <Skills isMobile={isMobile} />
       </section>
 
       <KFoot />

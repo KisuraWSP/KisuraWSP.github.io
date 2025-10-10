@@ -201,3 +201,81 @@ section.k-shell {
     width: 100%;
   }
 }
+
+/* =====================  MOBILE PACK  ===================== */
+/* Scales typography and paddings smoothly on all screens */
+:root {
+  --space-1: clamp(8px, 1.5vw, 14px);
+  --space-2: clamp(12px, 2vw, 18px);
+  --space-3: clamp(16px, 3vw, 24px);
+  --radius: clamp(14px, 2vw, 18px);
+}
+
+h1 { font-size: clamp(28px, 3.5vw, 40px); }
+h2 { font-size: clamp(22px, 3vw, 32px); }
+h3 { font-size: clamp(18px, 2.5vw, 26px); }
+
+/* Center each section and give sane padding on phones */
+.k-shell {
+  width: min(1100px, 92vw);
+  margin-inline: auto;
+  padding: var(--space-3);
+  border-radius: var(--radius);
+}
+
+/* Keep the glass panel centered and comfy */
+.k-shell.glass {
+  border-radius: var(--radius);
+}
+
+/* 2-col hero collapses to 1 col on phones */
+.center-grid { gap: var(--space-3); }
+@media (max-width: 768px) {
+  .center-grid { grid-template-columns: 1fr; }
+}
+
+/* Profile image that scales nicely */
+.profile-img {
+  width: clamp(200px, 52vw, 420px);
+  height: clamp(200px, 52vw, 420px);
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Cards that fill the container on mobile but don’t stretch on desktop */
+.card-resp {
+  width: 100%;
+  max-width: 560px;   /* desktop cap */
+  margin-inline: auto;
+}
+
+/* Media inside cards stays sharp and consistent */
+.card-resp .card-img-top {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-top-left-radius: calc(var(--radius) - 4px);
+  border-top-right-radius: calc(var(--radius) - 4px);
+}
+
+/* Rows inside our shells: center and space without Bootstrap’s negative margins */
+.k-shell .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  justify-content: center !important;
+  gap: var(--space-2);
+}
+.k-shell .row > [class*="col"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  display: flex;
+  justify-content: center;
+}
+
+/* Section spacing that won’t feel cramped on phones */
+.section { margin: var(--space-3) 0; }
+
+/* Tighten the navbar on mobile */
+@media (max-width: 768px) {
+  .k-nav { top: 8px; padding: 6px 10px; }
+}
