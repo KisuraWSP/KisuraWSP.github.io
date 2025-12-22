@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-rajdhani);
+  --font-mono: var(--font-mono);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  /* Dark Mode Aero-Cyber Palette */
+  --background: #030712; /* gray-950 */
+  --foreground: #f8fafc; /* slate-50 */
+
+  --primary: #06b6d4; /* cyan-500 */
+  --primary-foreground: #020617; /* slate-950 */
+
+  --secondary: #8b5cf6; /* violet-500 */
+  --secondary-foreground: #ffffff;
+
+  --accent: #10b981; /* emerald-500 */
+  --accent-foreground: #020617;
+
+  --destructive: #ef4444; /* red-500 */
+  --destructive-foreground: #ffffff;
+
+  --muted: #1e293b; /* slate-800 */
+  --muted-foreground: #94a3b8; /* slate-400 */
+
+  --card: #0f172a; /* slate-900 (slightly lighter than bg) */
+  --card-foreground: #f8fafc;
+
+  --border: #1e293b; /* slate-800 */
+  --input: #1e293b;
+  --ring: #06b6d4; /* cyan-500 */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-slate-900/40 backdrop-blur-md border border-slate-700/50 shadow-xl;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.5), 0 0 20px rgba(6, 182, 212, 0.3);
+  }
+
+  .glow-border {
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+  }
+}
+
