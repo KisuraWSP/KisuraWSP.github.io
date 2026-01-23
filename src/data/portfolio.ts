@@ -114,6 +114,22 @@ export const PORTFOLIO_DATA = {
             tech: ["HTML", "CSS", "JavaScript"],
             link: "https://github.com/KisuraWSP/research_website",
             status: "Completed",
+        },
+        {
+            id: "ios-ar-app",
+            title: "IOS AR APP",
+            description: "This Application is a IOS app developed for an assignment in the Mobile Application Design and Development module in our university",
+            tech: ["Swift", "ARKit"],
+            link: "https://github.com/KisuraWSP/MADD_Assignment_PartA",
+            status: "Completed",
+        },
+        {
+            id: "tvos-app",
+            title: "TVOS App",
+            description: "This Application is a TVOs app developed for an assignment in the Mobile Application Design and Development module in our university",
+            tech: ["Swift", "TVos"],
+            link: "https://github.com/KisuraWSP/MADD_Assignment_PartB",
+            status: "Completed",
         }
     ]
 };
