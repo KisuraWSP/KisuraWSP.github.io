@@ -106,6 +106,14 @@ export const PORTFOLIO_DATA = {
             tech: ["Python", "Tkinter"],
             link: "https://github.com/KisuraWSP/DIP-Project",
             status: "Completed",
+        },
+        {
+            id: "our-sliit-research-website",
+            title: "Our Group Research Website",
+            description: "This is a static HTML Site which hosts the content for the research that our group conducted during our 4th year",
+            tech: ["HTML", "CSS", "JavaScript"],
+            link: "https://github.com/KisuraWSP/research_website",
+            status: "Completed",
         }
     ]
 };
