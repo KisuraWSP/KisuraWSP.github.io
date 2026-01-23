@@ -8,7 +8,6 @@ export default function Home() {
     <HudLayout>
       <HeroSection />
       <ProjectsSection />
-      <SkillsSection /> {/* Component added */}
     </HudLayout>
   );
 }

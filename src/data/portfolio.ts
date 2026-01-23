@@ -8,36 +8,37 @@ export const PORTFOLIO_DATA = {
         socials: {
             github: "https://github.com/KisuraWSP",
             linkedin: "https://www.linkedin.com/in/kisurawsp/",
-            twitter: "https://x.com/redstonemc2003"
+            twitter: "https://x.com/redstonemc2003",
+            itchio : "https://redstonemc2003.itch.io/",
         }
     },
     skills: [
-        { name: "Rust", level: 85, category: "Systems" },
         { name: "Java", level: 90, category: "Backend" },
-        { name: "C++", level: 80, category: "Systems" },
         { name: "C#", level: 75, category: "Game Dev" },
         { name: "Python", level: 85, category: "Data/Scripting" },
-        { name: "Go", level: 70, category: "Backend" },
         { name: "Kotlin", level: 65, category: "Mobile" },
         { name: "TypeScript", level: 90, category: "Web" },
+        { name: "JavaScript", level: 90, category: "Web" },
         { name: "React", level: 90, category: "Frontend" },
         { name: "Next.js", level: 80, category: "Frontend" },
-        { name: "Node.js", level: 85, category: "Backend" },
         { name: "MySQL", level: 80, category: "Database" },
         { name: "MongoDB", level: 75, category: "Database" },
         { name: "Git", level: 95, category: "DevOps" },
         { name: "HTML5/CSS3", level: 95, category: "Frontend" },
+        { name: "Solidjs", level: 69, category : "Frontend" }
     ],
     experience: [
         {
             role: "Game Development Intern",
             company: "ZinCaT Technology",
             type: "Internship",
-            dates: "Jul 2025 – Present",
+            dates: "Jul 2025 – Jan 2026",
             duration: "6 mos",
             location: "Physical",
             summary: [
                 "Building 2D games using the construct3 game engine",
+                "Developed 4 Hyper Casual games during my internship period",
+                "Learnt about game API integration for the games i had built"
             ],
             skills: ["2D Game Development", "2D Software", "Collaboration"]
         },
@@ -62,7 +63,7 @@ export const PORTFOLIO_DATA = {
             id: "portfolio",
             title: "Portfolio",
             description: "Developer portfolio website.",
-            tech: ["Vite", "TypeScript", "Bootstrap", "Framer Motion", "React"],
+            tech: ["Nextjs", "TypeScript", "React"],
             link: "https://github.com/KisuraWSP/KisuraWSP.github.io",
             status: "Latest",
         },
@@ -95,7 +96,15 @@ export const PORTFOLIO_DATA = {
             title: "CourseWeb Student",
             description: "Mobile prototype for Moodle.",
             tech: ["Kotlin"],
-            link: "https://github.com/KisuraWSP/courseweb_student",
+            link: "https://github.com/devgithub-sl/courseweb_student",
+            status: "Completed",
+        },
+        {
+            id: "dip-project",
+            title: "DIP Project",
+            description: "A Digital Image Manipulation software made to showcase various image processing algorithms.",
+            tech: ["Python", "Tkinter"],
+            link: "https://github.com/KisuraWSP/DIP-Project",
             status: "Completed",
         }
     ]

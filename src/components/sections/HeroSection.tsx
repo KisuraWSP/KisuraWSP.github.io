@@ -51,27 +51,9 @@ export function HeroSection() {
                     className="relative z-10 w-full shadow-2xl border-slate-700/80 bg-black/90 backdrop-blur-xl"
                     height="h-[400px]"
                     initialOutput={[
-                        "> sys_boot_sequence.exe",
-                        "Loading kernel... OK",
-                        "Mounting file system... OK",
-                        "Initializing graphical interface...",
-                        "User: Kisura W.S.P detected.",
-                        "Access Level: ADMIN",
-                        " ",
-                        "WELCOME TO THE MAINFRAME.",
                         "Type 'help' to view available commands."
                     ]}
                 />
-
-                {/* Floating tech elements */}
-                <motion.div
-                    animate={{ y: [0, -10, 0] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute -top-12 -right-12 p-4 glass-panel rounded-lg border-cyan-500/30 hidden md:block"
-                >
-                    <div className="text-xs text-cyan-400 font-mono mb-1">STATUS</div>
-                    <div className="text-2xl font-bold text-white">ONLINE</div>
-                </motion.div>
             </motion.div>
 
         </section>

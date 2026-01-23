@@ -10,7 +10,7 @@ interface TerminalProps {
     height?: string;
 }
 
-export function Terminal({ className, initialOutput = ["Welcome to KisuraOS v1.0", "Type 'help' for commands."], height = "h-64" }: TerminalProps) {
+export function Terminal({ className, initialOutput = ["Welcome", "Type 'help' for commands."], height = "h-64" }: TerminalProps) {
     const [output, setOutput] = useState<string[]>(initialOutput);
     const [input, setInput] = useState("");
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -30,13 +30,13 @@ export function Terminal({ className, initialOutput = ["Welcome to KisuraOS v1.0
                 response = "Available commands: help, about, skills, contact, clear";
                 break;
             case "about":
-                response = "Kisura W.S.P - Systems Developer & Game Developer.";
+                response = "Kisura W.S.P - Software & Game Developer.";
                 break;
             case "skills":
-                response = "Rust, Java, React, Game Dev, System Architecture.";
+                response = "Game Dev, Software Development";
                 break;
             case "contact":
-                response = "kisura2003@gmail.com | github.com/KisuraWSP";
+                response = "kisura2003@gmail.com | https://www.linkedin.com/in/kisurawsp/";
                 break;
             case "clear":
                 setOutput([]);

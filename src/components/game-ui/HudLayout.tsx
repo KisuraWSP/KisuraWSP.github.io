@@ -62,39 +62,11 @@ export function HudLayout({ children }: HudLayoutProps) {
                 {children}
             </main>
 
-            {/* Bottom HUD Bar */}
-            <footer className="fixed bottom-0 left-0 right-0 h-12 z-50 flex items-center justify-between px-6 border-t border-white/10 bg-black/60 backdrop-blur-md text-xs font-mono text-muted-foreground">
-                <div className="flex items-center gap-4">
-                    <span>HP: 100%</span>
-                    <div className="w-24 h-2 bg-slate-800 rounded-full overflow-hidden">
-                        <motion.div
-                            className="h-full bg-emerald-500"
-                            initial={{ width: "0%" }}
-                            animate={{ width: "100%" }}
-                            transition={{ duration: 1.5, ease: "circOut" }}
-                        />
-                    </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                    <span>ENERGY</span>
-                    <div className="w-24 h-2 bg-slate-800 rounded-full overflow-hidden">
-                        <motion.div
-                            className="h-full bg-cyan-500"
-                            initial={{ width: "0%" }}
-                            animate={{ width: "85%" }}
-                            transition={{ duration: 1.5, delay: 0.2, ease: "circOut" }}
-                        />
-                    </div>
-                </div>
-            </footer>
-
             {/* Corner Decorations */}
             <div className="fixed top-20 left-6 w-4 h-4 border-t-2 border-l-2 border-cyan-500/50 rounded-tl-lg pointer-events-none" />
             <div className="fixed top-20 right-6 w-4 h-4 border-t-2 border-r-2 border-cyan-500/50 rounded-tr-lg pointer-events-none" />
             <div className="fixed bottom-16 left-6 w-4 h-4 border-b-2 border-l-2 border-cyan-500/50 rounded-bl-lg pointer-events-none" />
             <div className="fixed bottom-16 right-6 w-4 h-4 border-b-2 border-r-2 border-cyan-500/50 rounded-br-lg pointer-events-none" />
-
         </div>
     );
 }

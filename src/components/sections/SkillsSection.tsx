@@ -29,20 +29,6 @@ function SkillNode({ name, level, category, delay = 0 }: SkillNodeProps) {
             )}>
                 <div className="flex justify-between items-center mb-2 gap-4">
                     <span className="text-cyan-100 font-bold font-mono text-sm">{name}</span>
-                    <span className="text-[10px] text-slate-500 font-mono uppercase tracking-wider">{category}</span>
-                </div>
-
-                <div className="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
-                    <motion.div
-                        className="h-full bg-cyan-500"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${level}%` }}
-                        transition={{ duration: 1, delay: delay + 0.2 }}
-                    />
-                </div>
-
-                <div className="absolute -right-2 -top-2 w-6 h-6 rounded-full bg-slate-800 border border-slate-600 flex items-center justify-center text-[10px] text-white font-mono group-hover:border-cyan-400 group-hover:text-cyan-400 transition-colors">
-                    {Math.floor(level / 10)}
                 </div>
             </div>
         </motion.div>
@@ -61,9 +47,6 @@ export function SkillsSection() {
                     <h2 className="text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500 tracking-tighter">
                         SKILLS & TECHNOLOGIES
                     </h2>
-                    <p className="text-slate-400 max-w-2xl mx-auto font-mono text-sm">
-                        Unlock new capabilities by acquiring advanced technologies.
-                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">

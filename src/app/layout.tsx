@@ -14,8 +14,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kisura's Portfolio",
-  description: "Advanced Systems Architect & Creative Frontend Engineer",
+  title: "Kisura W.S.P Portfolio",
+  description: "Software & Game Developer",
 };
 
 export default function RootLayout({

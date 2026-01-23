@@ -3,7 +3,7 @@
 import { HudLayout } from "@/components/game-ui/HudLayout";
 import { Button } from "@/components/ui/Button";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
-import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Github, Linkedin, Twitter, StoreIcon, Store } from "lucide-react";
 
 export default function ContactPage() {
     return (
@@ -15,9 +15,6 @@ export default function ContactPage() {
 
                 <div className="bg-slate-900/50 p-8 rounded-xl border border-slate-800 backdrop-blur-md max-w-md w-full space-y-8">
                     <div className="space-y-2 text-center">
-                        <p className="text-slate-400 text-sm font-mono">
-              // STATUS: LISTENING
-                        </p>
                         <p className="text-white text-lg">
                             Open for collaborations and opportunities.
                         </p>
@@ -27,7 +24,7 @@ export default function ContactPage() {
                         <a href={`mailto:${PORTFOLIO_DATA.personal.email}`} className="block">
                             <Button variant="primary" className="w-full h-14 text-lg">
                                 <Mail className="mr-3 w-5 h-5" />
-                                SEND TRANSMISSION
+                                SEND ME A MAIL
                             </Button>
                         </a>
                     </div>
@@ -41,6 +38,9 @@ export default function ContactPage() {
                         </a>
                         <a href={PORTFOLIO_DATA.personal.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">
                             <Twitter className="w-8 h-8" />
+                        </a>
+                        <a href={PORTFOLIO_DATA.personal.socials.itchio} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">
+                            <StoreIcon className="w-8 h-8" />
                         </a>
                     </div>
                 </div>
