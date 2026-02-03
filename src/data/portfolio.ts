@@ -10,6 +10,7 @@ export const PORTFOLIO_DATA = {
             linkedin: "https://www.linkedin.com/in/kisurawsp/",
             twitter: "https://x.com/redstonemc2003",
             itchio : "https://redstonemc2003.itch.io/",
+            youtube: "https://www.youtube.com/@redstonemc2003",
         }
     },
     skills: [
@@ -130,6 +131,38 @@ export const PORTFOLIO_DATA = {
             tech: ["Swift", "TVos"],
             link: "https://github.com/KisuraWSP/MADD_Assignment_PartB",
             status: "Completed",
-        }
+        },
+        {
+            id: "travel-guider",
+            title: "TravelGuider",
+            description: "A tourism & travel mobile application made for the MADD (Mobile Application Design & Development) module",
+            tech: ["Kotlin"],
+            link: "https://github.com/KisuraWSP/TravelGuider",
+            status: "Completed",
+        },
+        {
+            id: "sokoban-game",
+            title: "Sokoban Game",
+            description: "This project is used to learn how to make a sokoban style game",
+            tech: ["Odinlang", "Raylib"],
+            link: "https://github.com/KisuraWSP/sokoban-game",
+            status: "Completed",
+        },
+        {
+            id: "book-api",
+            title: "Book API",
+            description: "This project is made inorder to learn nestjs library",
+            tech: ["NestJs", "TypeScript"],
+            link: "https://github.com/KisuraWSP/book-api",
+            status: "Completed",
+        },
+        {
+            id: "trakker",
+            title: "Trakker",
+            description: "This project is a simple TODO CRUD Application using the Solidjs framework and MongoDB for data store",
+            tech: ["SolidJs", "TypeScript", "MongoDB"],
+            link: "https://github.com/KisuraWSP/trakker",
+            status: "Completed",
+        },
     ]
 };

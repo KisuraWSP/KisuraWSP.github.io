@@ -3,7 +3,7 @@
 import { HudLayout } from "@/components/game-ui/HudLayout";
 import { Button } from "@/components/ui/Button";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
-import { Mail, Github, Linkedin, Twitter, StoreIcon, Store } from "lucide-react";
+import { Mail, Github, Linkedin, Twitter, StoreIcon, Youtube } from "lucide-react";
 
 export default function ContactPage() {
     return (
@@ -41,6 +41,9 @@ export default function ContactPage() {
                         </a>
                         <a href={PORTFOLIO_DATA.personal.socials.itchio} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">
                             <StoreIcon className="w-8 h-8" />
+                        </a>
+                        <a href={PORTFOLIO_DATA.personal.socials.youtube} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">
+                            <Youtube className="w-8 h-8" />
                         </a>
                     </div>
                 </div>
