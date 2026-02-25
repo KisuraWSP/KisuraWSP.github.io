@@ -105,7 +105,7 @@ export const PORTFOLIO_DATA = {
             title: "CourseWeb Student",
             description: "Mobile prototype for Moodle.",
             tech: ["Kotlin"],
-            link: "https://github.com/devgithub-sl/courseweb_student",
+            link: "https://github.com/KisuraWSP/courseweb_student",
             status: "Completed",
         },
         {
