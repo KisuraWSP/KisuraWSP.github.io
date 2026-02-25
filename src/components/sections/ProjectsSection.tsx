@@ -80,7 +80,7 @@ export function ProjectsSection() {
                             <CardFooter className="pt-4 border-t border-slate-700/50">
                                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-full">
                                     <Button variant="cyber" size="sm" className="w-full justify-between group-hover:bg-cyan-500/10">
-                                        ACCESS FILES
+                                        {project.id === "blog" ? "VISIT HERE" : "ACCESS FILES"}
                                         <ExternalLink className="w-4 h-4 ml-2" />
                                     </Button>
                                 </a>

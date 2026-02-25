@@ -61,6 +61,14 @@ export const PORTFOLIO_DATA = {
     ],
     projects: [
         {
+            id: "blog",
+            title: "My Blog",
+            description: "Developer blog website.",
+            tech: ["Astro"],
+            link: "https://kimsura-blog.vercel.app",
+            status: "Latest",
+        },
+        {
             id: "portfolio",
             title: "Portfolio",
             description: "Developer portfolio website.",
