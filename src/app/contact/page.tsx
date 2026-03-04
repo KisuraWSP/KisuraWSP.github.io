@@ -1,6 +1,6 @@
 "use client";
 
-import { HudLayout } from "@/components/game-ui/HudLayout";
+import { HudLayout } from "@/components/items/HudLayout";
 import { Button } from "@/components/ui/Button";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
 import { Mail, Github, Linkedin, Twitter, StoreIcon, Youtube } from "lucide-react";

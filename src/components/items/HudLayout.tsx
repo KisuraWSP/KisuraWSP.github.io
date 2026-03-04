@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { label } from "framer-motion/client";
 
 interface HudLayoutProps {
     children: ReactNode;
@@ -17,6 +18,7 @@ export function HudLayout({ children }: HudLayoutProps) {
     const navItems = [
         { label: "HOME", path: "/" },
         { label: "EXPERIENCE", path: "/experience" },
+        { label: "EDUCATION", path: "/education" },
         { label: "SKILLS", path: "/skills" },
         { label: "CONTACT", path: "/contact" },
     ];

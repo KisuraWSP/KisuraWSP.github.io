@@ -1,7 +1,7 @@
 export const PORTFOLIO_DATA = {
     personal: {
         name: "Kisura W.S.P",
-        title: "Web Developer / Game Designer / Software Engineer",
+        title: "Game & Software Developer",
         bio: "I am a passionate and adaptable Interactive Media student with strong programming skills. I excel in dynamic environments, solve problems efficiently, and pay close attention to detail. My creativity enhances my work quality. As a quick learner, I eagerly embrace new challenges and technologies.",
         location: "Sri Lanka Institute of Information Technology",
         email: "kisura2003@gmail.com",
@@ -14,19 +14,31 @@ export const PORTFOLIO_DATA = {
         }
     },
     skills: [
-        { name: "Java", level: 90, category: "Backend" },
-        { name: "C#", level: 75, category: "Game Dev" },
-        { name: "Python", level: 85, category: "Data/Scripting" },
-        { name: "Kotlin", level: 65, category: "Mobile" },
+        { name: "Java", level: 90, category: "Programming Languages" },
+        { name: "C#", level: 75, category: "Programming Languages" },
+        { name: "Python", level: 85, category: "Programming Languages" },
+        { name: "Kotlin", level: 65, category: "Programming Languages" },
         { name: "TypeScript", level: 90, category: "Web" },
         { name: "JavaScript", level: 90, category: "Web" },
         { name: "React", level: 90, category: "Frontend" },
         { name: "Next.js", level: 80, category: "Frontend" },
         { name: "MySQL", level: 80, category: "Database" },
         { name: "MongoDB", level: 75, category: "Database" },
-        { name: "Git", level: 95, category: "DevOps" },
+        { name: "Git", level: 95, category: "Version Control" },
         { name: "HTML5/CSS3", level: 95, category: "Frontend" },
         { name: "Solidjs", level: 69, category : "Frontend" }
+    ],
+    education : [
+        {
+            degree: "BSc (Hons) in Information Technology Specialising in Interactive Media",
+            period: "2021-2025",
+            school: "Sri Lanka Institute of Information Technology"
+        },
+        {
+            degree: "Physical Science(Mathematics)",
+            period: "2016-2021",
+            school: "Lyceum International School, Sri Lanka"
+        },
     ],
     experience: [
         {

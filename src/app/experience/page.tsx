@@ -1,6 +1,6 @@
 "use client";
 
-import { HudLayout } from "@/components/game-ui/HudLayout";
+import { HudLayout } from "@/components/items/HudLayout";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 
 export default function ExperiencePage() {

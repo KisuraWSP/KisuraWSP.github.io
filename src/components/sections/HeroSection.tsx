@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
-import { Terminal } from "@/components/game-ui/Terminal";
+import { Terminal } from "@/components/items/Terminal";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
 import { ArrowRight, Terminal as TerminalIcon } from "lucide-react";
 
