@@ -35,25 +35,26 @@ export function HudLayout({ children }: HudLayoutProps) {
                 }}
             />
             <div className="fixed inset-0 pointer-events-none z-0 bg-[linear-gradient(135deg,rgba(6,182,212,0.08),transparent_35%,rgba(16,185,129,0.05)_68%,transparent)]" />
+            <div className="pointer-events-none fixed inset-x-0 top-0 z-0 hidden h-64 border-b border-cyan-300/10 bg-[linear-gradient(180deg,rgba(6,182,212,0.08),transparent)] lg:block" />
 
             {/* Top HUD Bar */}
-            <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/65 backdrop-blur-xl">
-                <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+            <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-black/70 shadow-[0_18px_70px_rgba(0,0,0,0.38)] backdrop-blur-xl">
+                <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 xl:max-w-[88rem]">
                     <Link
                         href="/"
                         onClick={() => setIsMenuOpen(false)}
-                        className="min-w-0 text-xl font-bold tracking-[0.18em] text-cyan-400 drop-shadow-[0_0_8px_rgba(6,182,212,0.8)] sm:text-2xl"
+                        className="min-w-0 text-xl font-bold tracking-[0.18em] text-cyan-400 drop-shadow-[0_0_8px_rgba(6,182,212,0.8)] transition hover:text-cyan-200 sm:text-2xl"
                     >
                         KISURA_WSP
                     </Link>
 
-                    <nav className="hidden items-center gap-2 lg:flex">
+                    <nav className="hidden items-center gap-2 rounded-lg border border-white/10 bg-slate-950/50 p-1 lg:flex">
                         {navItems.map((item) => (
                             <Link key={item.path} href={item.path}>
                                 <Button
                                     variant={pathname === item.path ? "primary" : "cyber"}
                                     size="sm"
-                                    className={cn("w-30", pathname === item.path && "glow-border")}
+                                    className={cn("w-30 border-transparent shadow-none", pathname === item.path && "glow-border")}
                                 >
                                     {item.label}
                                 </Button>
@@ -96,7 +97,7 @@ export function HudLayout({ children }: HudLayoutProps) {
             </header>
 
             {/* Main Content Area */}
-            <main className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col px-4 pb-10 pt-20 sm:px-6 lg:px-8">
+            <main className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col px-4 pb-10 pt-20 sm:px-6 lg:px-8 xl:max-w-[88rem]">
                 {children}
             </main>
 

@@ -66,7 +66,7 @@ export function Terminal({ className, initialOutput = ["Welcome", "Type 'help' f
             {/* Body */}
             <div
                 ref={scrollRef}
-                className="custom-scrollbar flex-1 space-y-1 overflow-y-auto p-3 sm:p-4"
+                className="custom-scrollbar flex-1 space-y-1 overflow-y-auto bg-[linear-gradient(180deg,rgba(6,182,212,0.035),transparent_32%)] p-3 sm:p-4"
             >
                 {output.map((line, i) => (
                     <div key={i} className={cn("break-words", line.startsWith(">") ? "text-cyan-400" : "text-slate-300")}>

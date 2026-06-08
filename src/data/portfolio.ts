@@ -3,7 +3,7 @@ export const PORTFOLIO_DATA = {
         name: "Kisura W.S.P",
         title: "Game & Software Developer",
         bio: "I am a passionate and adaptable Interactive Media student with strong programming skills. I excel in dynamic environments, solve problems efficiently, and pay close attention to detail. My creativity enhances my work quality. As a quick learner, I eagerly embrace new challenges and technologies.",
-        location: "Sri Lanka Institute of Information Technology",
+        location: "Sri Lanka",
         email: "kisura2003@gmail.com",
         socials: {
             github: "https://github.com/KisuraWSP",
