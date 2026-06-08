@@ -42,6 +42,18 @@ export const PORTFOLIO_DATA = {
     ],
     experience: [
         {
+            role: "Software Development Intern",
+            company: "Impact IT Solutions",
+            type: "Internship",
+            dates: "April 2026 – Present",
+            duration: "",
+            location: "Remote",
+            summary: [
+                "Learning ASP.NET Core and C# to build web applications.",
+            ],
+            skills: [".NET Framework", "C#", "ASP.NET Core"]
+        },
+        {
             role: "Game Development Intern",
             company: "ZinCaT Technology",
             type: "Internship",
