@@ -1,8 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { useState, useRef, useEffect, ReactNode } from "react";
-import { motion } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
 
 interface TerminalProps {
     className?: string; // Explicitly include className in props
@@ -55,29 +54,29 @@ export function Terminal({ className, initialOutput = ["Welcome", "Type 'help' f
     };
 
     return (
-        <div className={cn("font-mono text-sm bg-black/90 border border-slate-700 rounded-md shadow-2xl flex flex-col overflow-hidden", height, className)}>
+        <div className={cn("flex flex-col overflow-hidden rounded-md border border-slate-700 bg-black/90 font-mono text-xs shadow-2xl sm:text-sm", height, className)}>
             {/* Header */}
-            <div className="bg-slate-800 px-4 py-2 flex items-center gap-2 border-b border-slate-700">
-                <div className="w-3 h-3 rounded-full bg-red-500" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                <div className="w-3 h-3 rounded-full bg-green-500" />
-                <span className="ml-2 text-xs text-slate-400">kisura@terminal:~</span>
+            <div className="flex items-center gap-2 border-b border-slate-700 bg-slate-800 px-3 py-2 sm:px-4">
+                <div className="h-3 w-3 shrink-0 rounded-full bg-red-500" />
+                <div className="h-3 w-3 shrink-0 rounded-full bg-yellow-500" />
+                <div className="h-3 w-3 shrink-0 rounded-full bg-green-500" />
+                <span className="ml-1 truncate text-xs text-slate-400 sm:ml-2">kisura@terminal:~</span>
             </div>
 
             {/* Body */}
             <div
                 ref={scrollRef}
-                className="flex-1 p-4 overflow-y-auto custom-scrollbar space-y-1"
+                className="custom-scrollbar flex-1 space-y-1 overflow-y-auto p-3 sm:p-4"
             >
                 {output.map((line, i) => (
-                    <div key={i} className={line.startsWith(">") ? "text-cyan-400" : "text-slate-300"}>
+                    <div key={i} className={cn("break-words", line.startsWith(">") ? "text-cyan-400" : "text-slate-300")}>
                         {line}
                     </div>
                 ))}
                 <div className="flex items-center gap-2 text-cyan-400">
-                    <span>{">"}</span>
+                    <span className="shrink-0">{">"}</span>
                     <input
-                        className="bg-transparent border-none outline-none flex-1 text-slate-100 placeholder-slate-600"
+                        className="min-w-0 flex-1 border-none bg-transparent text-slate-100 outline-none placeholder-slate-600"
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         onKeyDown={handleKeyDown}

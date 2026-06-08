@@ -1,38 +1,36 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/Button";
 import { Terminal } from "@/components/items/Terminal";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
-import { ArrowRight, Terminal as TerminalIcon } from "lucide-react";
 
 export function HeroSection() {
     return (
-        <section className="min-h-[85vh] flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 relative">
+        <section className="relative flex min-h-[calc(100svh-5rem)] flex-col items-center justify-center gap-10 py-10 sm:py-14 lg:flex-row lg:gap-16 lg:py-20 xl:gap-24">
 
             {/* Left Column: Text & Bio */}
             <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="flex-1 space-y-8 max-w-2xl text-center lg:text-left z-20"
+                className="z-20 w-full max-w-2xl flex-1 space-y-6 text-center lg:text-left"
             >
                 <div className="space-y-4">
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white">
+                    <h1 className="text-5xl font-black tracking-normal text-white sm:text-6xl md:text-7xl lg:text-8xl">
                         <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400">
                             {PORTFOLIO_DATA.personal.name.split(" ")[0]}
                         </span>
-                        <span className="block text-4xl md:text-6xl text-slate-500 mt-2">
+                        <span className="mt-1 block text-3xl text-slate-500 sm:text-4xl md:text-6xl">
                             {PORTFOLIO_DATA.personal.name.split(" ").slice(1).join(" ")}
                         </span>
                     </h1>
 
-                    <h2 className="text-xl md:text-2xl text-cyan-400 font-mono">
+                    <h2 className="font-mono text-lg text-cyan-400 sm:text-xl md:text-2xl">
                         {">"} {PORTFOLIO_DATA.personal.title}
                     </h2>
                 </div>
 
-                <p className="text-slate-400 text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 border-l-2 border-slate-700 pl-6">
+                <p className="mx-auto max-w-xl border-t border-slate-700 pt-5 text-base leading-7 text-slate-300 sm:border-l-2 sm:border-t-0 sm:pl-6 sm:pt-0 sm:text-lg lg:mx-0">
                     {PORTFOLIO_DATA.personal.bio}
                 </p>
             </motion.div>
@@ -42,14 +40,11 @@ export function HeroSection() {
                 initial={{ opacity: 0, scale: 0.9, y: 50 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="flex-1 w-full max-w-lg relative"
+                className="relative w-full max-w-lg flex-1"
             >
-                {/* Decorative background glow */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg blur opacity-20 animate-pulse" />
-
                 <Terminal
-                    className="relative z-10 w-full shadow-2xl border-slate-700/80 bg-black/90 backdrop-blur-xl"
-                    height="h-[400px]"
+                    className="relative z-10 w-full border-slate-700/80 bg-black/90 shadow-2xl backdrop-blur-xl"
+                    height="h-[320px] sm:h-[400px]"
                     initialOutput={[
                         "Type 'help' to view available commands."
                     ]}
