@@ -19,7 +19,7 @@ export function HudLayout({ children }: HudLayoutProps) {
         { label: "HOME", path: "/" },
         { label: "EXPERIENCE", path: "/experience" },
         { label: "EDUCATION", path: "/education" },
-        { label: "SKILLS", path: "/skills" },
+        // { label: "SKILLS", path: "/skills" },
         { label: "CONTACT", path: "/contact" },
     ];
 
