@@ -8,7 +8,7 @@ export const PORTFOLIO_DATA = {
         socials: {
             github: "https://github.com/KisuraWSP",
             linkedin: "https://www.linkedin.com/in/kisurawsp/",
-            twitter: "https://x.com/redstonemc2003",
+            twitter: "https://x.com/johnkimsura",
             itchio : "https://redstonemc2003.itch.io/",
             youtube: "https://www.youtube.com/@redstonemc2003",
         }

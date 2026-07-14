@@ -86,7 +86,7 @@ export function HeroSection() {
                 <div className="pointer-events-none absolute -right-3 -top-3 hidden h-20 w-20 border-r border-t border-cyan-300/45 lg:block" />
                 <div className="pointer-events-none absolute -bottom-3 -left-3 hidden h-20 w-20 border-b border-l border-emerald-300/35 lg:block" />
                 <Terminal
-                    className="relative z-10 w-full border-slate-700/80 bg-black/90 shadow-2xl shadow-cyan-950/40 backdrop-blur-xl lg:h-[520px]"
+                    className="relative z-10 w-full border-slate-700/80 bg-black/90 shadow-2xl shadow-cyan-950/40 lg:h-[520px]"
                     height="h-[320px] sm:h-[400px]"
                     initialOutput={[
                         "Type 'help' to view available commands."

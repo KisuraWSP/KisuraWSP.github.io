@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useState } from "react";
+import { ReactNode, useLayoutEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -14,6 +14,20 @@ interface HudLayoutProps {
 export function HudLayout({ children }: HudLayoutProps) {
     const pathname = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const topBarRef = useRef<HTMLDivElement>(null);
+    // Sensible fallback matching the closed-menu banner+header height, corrected after mount.
+    const [topBarHeight, setTopBarHeight] = useState(101);
+
+    useLayoutEffect(() => {
+        const el = topBarRef.current;
+        if (!el) return;
+        setTopBarHeight(el.offsetHeight);
+        const observer = new ResizeObserver(([entry]) => {
+            setTopBarHeight(entry.contentRect.height);
+        });
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
 
     const navItems = [
         { label: "HOME", path: "/" },
@@ -37,73 +51,92 @@ export function HudLayout({ children }: HudLayoutProps) {
             <div className="fixed inset-0 pointer-events-none z-0 bg-[linear-gradient(135deg,rgba(6,182,212,0.08),transparent_35%,rgba(16,185,129,0.05)_68%,transparent)]" />
             <div className="pointer-events-none fixed inset-x-0 top-0 z-0 hidden h-64 border-b border-cyan-300/10 bg-[linear-gradient(180deg,rgba(6,182,212,0.08),transparent)] lg:block" />
 
-            {/* Top HUD Bar */}
-            <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-black/70 shadow-[0_18px_70px_rgba(0,0,0,0.38)] backdrop-blur-xl">
-                <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 xl:max-w-[88rem]">
-                    <Link
-                        href="/"
-                        onClick={() => setIsMenuOpen(false)}
-                        className="min-w-0 text-xl font-bold tracking-[0.18em] text-cyan-400 drop-shadow-[0_0_8px_rgba(6,182,212,0.8)] transition hover:text-cyan-200 sm:text-2xl"
+            {/* Deprecation Banner + Top HUD Bar (measured as one block so content below never overlaps) */}
+            <div ref={topBarRef} className="fixed left-0 right-0 top-0 z-50">
+                <div className="border-b border-amber-400/30 bg-amber-950/90 px-4 py-2 text-center text-xs font-semibold tracking-wide text-amber-200 sm:text-sm">
+                    This portfolio is deprecated and has moved.{" "}
+                    <a
+                        href="https://kisurawsp.github.io/mycreativeportfolio/"
+                        className="underline decoration-amber-300/60 underline-offset-2 transition hover:text-amber-100"
                     >
-                        KISURA_WSP
-                    </Link>
-
-                    <nav className="hidden items-center gap-2 rounded-lg border border-white/10 bg-slate-950/50 p-1 lg:flex">
-                        {navItems.map((item) => (
-                            <Link key={item.path} href={item.path}>
-                                <Button
-                                    variant={pathname === item.path ? "primary" : "cyber"}
-                                    size="sm"
-                                    className={cn("w-30 border-transparent shadow-none", pathname === item.path && "glow-border")}
-                                >
-                                    {item.label}
-                                </Button>
-                            </Link>
-                        ))}
-                    </nav>
-
-                    <button
-                        type="button"
-                        aria-label={isMenuOpen ? "Close navigation" : "Open navigation"}
-                        aria-expanded={isMenuOpen}
-                        onClick={() => setIsMenuOpen((open) => !open)}
-                        className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-cyan-400/40 bg-cyan-500/10 text-cyan-200 transition hover:bg-cyan-500/20 lg:hidden"
-                    >
-                        {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-                    </button>
+                        Portfolio 2.0
+                    </a>
                 </div>
 
-                {isMenuOpen && (
-                    <nav className="border-t border-white/10 bg-slate-950/95 px-4 py-3 shadow-2xl lg:hidden">
-                        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-2 sm:grid-cols-2">
+                <header className="border-b border-white/10 bg-black/90 shadow-[0_18px_70px_rgba(0,0,0,0.38)]">
+                    <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 xl:max-w-[88rem]">
+                        <Link
+                            href="/"
+                            onClick={() => setIsMenuOpen(false)}
+                            className="min-w-0 text-xl font-bold tracking-[0.18em] text-cyan-400 drop-shadow-[0_0_8px_rgba(6,182,212,0.8)] transition hover:text-cyan-200 sm:text-2xl"
+                        >
+                            KISURA_WSP
+                        </Link>
+
+                        <nav className="hidden items-center gap-2 rounded-lg border border-white/10 bg-slate-950/50 p-1 lg:flex">
                             {navItems.map((item) => (
-                                <Link
-                                    key={item.path}
-                                    href={item.path}
-                                    onClick={() => setIsMenuOpen(false)}
-                                    className={cn(
-                                        "rounded-md border px-4 py-3 text-sm font-bold tracking-[0.12em] transition",
-                                        pathname === item.path
-                                            ? "border-cyan-400 bg-cyan-400 text-slate-950"
-                                            : "border-slate-700 bg-slate-900/70 text-cyan-100 hover:border-cyan-400/70"
-                                    )}
-                                >
-                                    {item.label}
+                                <Link key={item.path} href={item.path}>
+                                    <Button
+                                        variant={pathname === item.path ? "primary" : "cyber"}
+                                        size="sm"
+                                        className={cn("w-30 border-transparent shadow-none", pathname === item.path && "glow-border")}
+                                    >
+                                        {item.label}
+                                    </Button>
                                 </Link>
                             ))}
-                        </div>
-                    </nav>
-                )}
-            </header>
+                        </nav>
+
+                        <button
+                            type="button"
+                            aria-label={isMenuOpen ? "Close navigation" : "Open navigation"}
+                            aria-expanded={isMenuOpen}
+                            onClick={() => setIsMenuOpen((open) => !open)}
+                            className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-cyan-400/40 bg-cyan-500/10 text-cyan-200 transition hover:bg-cyan-500/20 lg:hidden"
+                        >
+                            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                        </button>
+                    </div>
+                </header>
+            </div>
+
+            {/* Mobile nav dropdown, overlaid below the measured top bar so it never shifts page content */}
+            {isMenuOpen && (
+                <nav
+                    style={{ top: topBarHeight }}
+                    className="fixed inset-x-0 z-40 border-b border-white/10 bg-slate-950/95 px-4 py-3 shadow-2xl lg:hidden"
+                >
+                    <div className="mx-auto grid max-w-7xl grid-cols-1 gap-2 sm:grid-cols-2">
+                        {navItems.map((item) => (
+                            <Link
+                                key={item.path}
+                                href={item.path}
+                                onClick={() => setIsMenuOpen(false)}
+                                className={cn(
+                                    "rounded-md border px-4 py-3 text-sm font-bold tracking-[0.12em] transition",
+                                    pathname === item.path
+                                        ? "border-cyan-400 bg-cyan-400 text-slate-950"
+                                        : "border-slate-700 bg-slate-900/70 text-cyan-100 hover:border-cyan-400/70"
+                                )}
+                            >
+                                {item.label}
+                            </Link>
+                        ))}
+                    </div>
+                </nav>
+            )}
 
             {/* Main Content Area */}
-            <main className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col px-4 pb-10 pt-20 sm:px-6 lg:px-8 xl:max-w-[88rem]">
+            <main
+                style={{ paddingTop: topBarHeight }}
+                className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col px-4 pb-10 sm:px-6 lg:px-8 xl:max-w-[88rem]"
+            >
                 {children}
             </main>
 
             {/* Corner Decorations */}
-            <div className="pointer-events-none fixed left-3 top-20 hidden h-4 w-4 rounded-tl-lg border-l-2 border-t-2 border-cyan-500/50 sm:block" />
-            <div className="pointer-events-none fixed right-3 top-20 hidden h-4 w-4 rounded-tr-lg border-r-2 border-t-2 border-cyan-500/50 sm:block" />
+            <div style={{ top: topBarHeight }} className="pointer-events-none fixed left-3 hidden h-4 w-4 rounded-tl-lg border-l-2 border-t-2 border-cyan-500/50 sm:block" />
+            <div style={{ top: topBarHeight }} className="pointer-events-none fixed right-3 hidden h-4 w-4 rounded-tr-lg border-r-2 border-t-2 border-cyan-500/50 sm:block" />
             <div className="pointer-events-none fixed bottom-6 left-3 hidden h-4 w-4 rounded-bl-lg border-b-2 border-l-2 border-cyan-500/50 sm:block" />
             <div className="pointer-events-none fixed bottom-6 right-3 hidden h-4 w-4 rounded-br-lg border-b-2 border-r-2 border-cyan-500/50 sm:block" />
         </div>

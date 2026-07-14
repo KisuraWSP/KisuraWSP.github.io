@@ -1,8 +1,7 @@
 import { cn } from "@/lib/utils";
-import { motion, HTMLMotionProps } from "framer-motion";
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 
-interface CardProps extends HTMLMotionProps<"div"> {
+interface CardProps extends HTMLAttributes<HTMLDivElement> {
     children: ReactNode;
     variant?: "default" | "glass" | "neon";
     className?: string; // Explicitly include className in props
@@ -24,15 +23,12 @@ export function Card({
     };
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+        <div
             className={cn(baseStyles, variants[variant], className)}
             {...props}
         >
             {children}
-        </motion.div>
+        </div>
     );
 }
 

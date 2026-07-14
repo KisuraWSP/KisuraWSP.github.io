@@ -13,7 +13,7 @@ export default function ContactPage() {
                     CONTACT
                 </h1>
 
-                <div className="w-full max-w-md space-y-8 rounded-lg border border-slate-800 bg-slate-900/55 p-5 backdrop-blur-md sm:p-8">
+                <div className="w-full max-w-md space-y-8 rounded-lg border border-slate-800 bg-slate-900/90 p-5 sm:p-8">
                     <div className="space-y-2 text-center">
                         <p className="text-base text-white sm:text-lg">
                             Open for collaborations and opportunities.

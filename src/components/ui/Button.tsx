@@ -1,8 +1,7 @@
-import { motion, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-interface ButtonProps extends HTMLMotionProps<"button"> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: "primary" | "secondary" | "cyber" | "ghost" | "link";
     size?: "sm" | "md" | "lg";
     children: ReactNode;
@@ -17,7 +16,7 @@ export function Button({
     ...props
 }: ButtonProps) {
 
-    const baseStyles = "relative inline-flex items-center justify-center rounded-md font-bold uppercase tracking-wider transition-colors disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950";
+    const baseStyles = "relative inline-flex items-center justify-center rounded-md font-bold uppercase tracking-wider transition-colors disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 transition-transform duration-150 hover:scale-105 active:scale-95";
 
     const sizes = {
         sm: "h-8 px-4 text-xs",
@@ -28,15 +27,13 @@ export function Button({
     const variants = {
         primary: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_10px_rgba(6,182,212,0.5)]",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/90",
-        cyber: "bg-transparent border border-primary text-primary hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(6,182,212,0.4)] backdrop-blur-sm",
+        cyber: "bg-transparent border border-primary text-primary hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(6,182,212,0.4)]",
         ghost: "hover:bg-accent/10 hover:text-accent",
         link: "text-primary underline-offset-4 hover:underline",
     };
 
     return (
-        <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+        <button
             className={cn(baseStyles, sizes[size], variants[variant], className)}
             {...props}
         >
@@ -48,6 +45,6 @@ export function Button({
                 </>
             )}
             {children}
-        </motion.button>
+        </button>
     );
 }

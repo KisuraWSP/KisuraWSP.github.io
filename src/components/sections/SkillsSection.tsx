@@ -23,7 +23,7 @@ function SkillNode({ name, delay = 0 }: SkillNodeProps) {
             <div className="absolute -top-4 left-1/2 -z-10 h-4 w-px bg-slate-800 transition-colors group-hover:bg-cyan-500/50" />
 
             <div className={cn(
-                "relative rounded-lg border border-slate-700 bg-slate-900/50 p-4 backdrop-blur-sm",
+                "relative rounded-lg border border-slate-700 bg-slate-900/85 p-4",
                 "hover:border-cyan-500 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300",
                 "cursor-default group"
             )}>
