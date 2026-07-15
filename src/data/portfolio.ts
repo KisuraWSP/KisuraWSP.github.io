@@ -31,7 +31,7 @@ export const PORTFOLIO_DATA = {
     education : [
         {
             degree: "BSc (Hons) in Information Technology Specialising in Interactive Media",
-            period: "2021-2025",
+            period: "2021-2026",
             school: "Sri Lanka Institute of Information Technology"
         },
         {
