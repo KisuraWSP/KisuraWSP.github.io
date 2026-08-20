@@ -56,7 +56,7 @@ export function HudLayout({ children }: HudLayoutProps) {
                 <div className="border-b border-amber-400/30 bg-amber-950/90 px-4 py-2 text-center text-xs font-semibold tracking-wide text-amber-200 sm:text-sm">
                     This portfolio is deprecated and has moved.{" "}
                     <a
-                        href="https://kisurawsp.github.io/mycreativeportfolio/"
+                        href="https://kisurawsp.netlify.app"
                         className="underline decoration-amber-300/60 underline-offset-2 transition hover:text-amber-100"
                     >
                         Portfolio 2.0
