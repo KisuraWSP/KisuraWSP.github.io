@@ -1,36 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> This Repository Contained my Old Portfolio which showcased myself as a Software Developer <br/>
+> But Now I transitioned into a Game Developer so now i will be focusing on that <br/>
+> and i will build software tools but for my own usecase rather than to sell to public <br/>
+> only products i will sell are my videogames, if i sell any software i make it will be on my store <br/>
+> Your Support is greatly appreciated for purchasing my products or even reviewing and commenting on them, <br/>
+> because they tell me that the product is good and it makes my day so yh. <br/>
+> If you want to have further clarifications lets have a chat on discord and i will invite you to my personal discord <br/>
+> Or you can message me on my public social media channels which i will reveal. So yh, thanks for reading and have a nice day :) <br/>
