@@ -45,7 +45,7 @@ export const PORTFOLIO_DATA = {
             role: "Software Development Intern",
             company: "Impact IT Solutions",
             type: "Internship",
-            dates: "April 2026 – Present",
+            dates: "April 2026 – Nov 2026",
             duration: "",
             location: "Remote",
             summary: [
